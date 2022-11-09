@@ -1,0 +1,135 @@
+# Auth: Taylor McCampbell
+# File to store virus total API key and any other variables that may need to be used elsewhere in the program
+from stix2 import equivalence as eq
+API_KEY = "CHANGEME TO YOUR API KEY"
+# Specify whether API Key is public or premium
+API_PREMIUM = False
+API_VTOTAL_BASE_URL_V3 = 'https://www.virustotal.com/api/v3'
+API_MBAZAAR_BASE_URL= 'https://mb-api.abuse.ch/api/v1/'
+
+'''
+Weight dict for comparing things using the stix framework 
+
+Currently we have: 
+    AP 
+    Campaign 
+    Course of Action
+    Grouping 
+    Identity 
+    Incident
+    Indicator 
+    Intrusion-Set 
+    Location
+    Malware 
+    Marking-Definition
+    Relationship 
+    Report
+    Sighting 
+    Threat Actor 
+    Tool
+    Vulnerability 
+    IPV4 
+    Domain 
+    Malware Analysis
+
+'''
+
+WEIGHTS = {
+    "attack-pattern": {
+        "name": (30, eq.object.partial_string_based),
+        "external_references": (70, eq.object.partial_external_reference_based),
+    },
+    "campaign": {
+        "name": (60, eq.object.partial_string_based),
+        "aliases": (40, eq.object.partial_list_based),
+    },
+    "course-of-action": {
+        "name": (60, eq.object.partial_string_based),
+        "external_references": (40, eq.object.partial_external_reference_based),
+    },
+    "grouping": {
+        "name": (20, eq.object.partial_string_based),
+        "context": (20, eq.object.partial_string_based),
+        "object_refs": (60, eq.object.list_reference_check),
+    },
+    "identity": {
+        "name": (60, eq.object.partial_string_based),
+        "identity_class": (20, eq.object.exact_match),
+        "sectors": (20, eq.object.partial_list_based),
+    },
+    "incident": {
+        "name": (30, eq.object.partial_string_based),
+        "external_references": (70, eq.object.partial_external_reference_based),
+    },
+    "indicator": {
+        "indicator_types": (15, eq.object.partial_list_based),
+        "pattern": (80, eq.object.custom_pattern_based),
+        "valid_from": (5, eq.object.partial_timestamp_based),
+        "tdelta": 1,  # One day interval
+    },
+    "intrusion-set": {
+        "name": (20, eq.object.partial_string_based),
+        "external_references": (60, eq.object.partial_external_reference_based),
+        "aliases": (20, eq.object.partial_list_based),
+    },
+    "location": {
+        "longitude_latitude": (34, eq.object.partial_location_distance),
+        "region": (33, eq.object.exact_match),
+        "country": (33, eq.object.exact_match),
+        "threshold": 1000.0,
+    },
+    "malware": {
+        "malware_types": (20, eq.object.partial_list_based),
+        "name": (80, eq.object.partial_string_based),
+    },
+    "marking-definition": {
+        "name": (20, eq.object.exact_match),
+        "definition": (60, eq.object.exact_match),
+        "definition_type": (20, eq.object.exact_match),
+    },
+    "relationship": {
+        "relationship_type": (20, eq.object.exact_match),
+        "source_ref": (40, eq.object.reference_check),
+        "target_ref": (40, eq.object.reference_check),
+    },
+    "report": {
+        "name": (30, eq.object.partial_string_based),
+        "published": (10, eq.object.partial_timestamp_based),
+        "object_refs": (60, eq.object.list_reference_check),
+        "tdelta": 1,  # One day interval
+    },
+    "sighting": {
+        "first_seen": (5, eq.object.partial_timestamp_based),
+        "last_seen": (5, eq.object.partial_timestamp_based),
+        "sighting_of_ref": (40, eq.object.reference_check),
+        "observed_data_refs": (20, eq.object.list_reference_check),
+        "where_sighted_refs": (20, eq.object.list_reference_check),
+        "summary": (10, eq.object.exact_match),
+    },
+    "threat-actor": {
+        "name": (60, eq.object.partial_string_based),
+        "threat_actor_types": (20, eq.object.partial_list_based),
+        "aliases": (20, eq.object.partial_list_based),
+    },
+    "tool": {
+        "tool_types": (20, eq.object.partial_list_based),
+        "name": (80, eq.object.partial_string_based),
+    },
+    "vulnerability": {
+        "name": (30, eq.object.partial_string_based),
+        "external_references": (70, eq.object.partial_external_reference_based),
+    },
+    "ipv4-addr": {
+        "value": (100, eq.object.exact_match)
+    },
+    "domain-name": {
+        "value": (100, eq.object.exact_match)
+    },
+    "malware-analysis": {
+        "product": (30, eq.object.exact_match),
+        "result": (50, eq.object.exact_match),
+        "analysis_engine_version": (10, eq.object.exact_match),
+        "submitted": (10, eq.object.partial_timestamp_based),
+        "tdelta" : 1
+    }
+}

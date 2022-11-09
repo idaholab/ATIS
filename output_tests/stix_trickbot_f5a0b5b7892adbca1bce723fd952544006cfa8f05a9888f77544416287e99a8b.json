@@ -1,0 +1,359 @@
+{
+    "type": "bundle",
+    "id": "bundle--bedfc9e5-0638-453c-9cc4-d90e9e91cdb4",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee",
+            "created": "2022-08-29T19:13:33.006333Z",
+            "modified": "2022-08-29T19:13:33.006333Z",
+            "name": "f5a0b5b7892adbca1bce723fd952544006cfa8f05a9888f77544416287e99a8b",
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false,
+            "sample_refs": [
+                "file--93bb91c0-fb0e-52a7-b0c8-4c247a1f4458"
+            ]
+        },
+        {
+            "type": "file",
+            "spec_version": "2.1",
+            "id": "file--93bb91c0-fb0e-52a7-b0c8-4c247a1f4458",
+            "hashes": {
+                "MD5": "f9cfcd12a4786841168277361b653fcd",
+                "SHA-1": "68c09cc3098e86eecf1d5fca31eb82f5f127dc94",
+                "SHA-256": "f5a0b5b7892adbca1bce723fd952544006cfa8f05a9888f77544416287e99a8b",
+                "SSDEEP": "6144:gHRAXqUeeRrYDzYgnu9EUex/+vbGset1ZYZJ4G28GMioE+aqb:6RAx7YDzfuMZ+M2zOxl4"
+            },
+            "name": "group1.dll",
+            "extensions": {
+                "windows-pebinary-ext": {
+                    "pe_type": "dll",
+                    "imphash": "140793172cc35d6ed3ad0ac6b0e6b01c",
+                    "number_of_sections": 5,
+                    "time_date_stamp": "2021-12-23T02:45:23Z",
+                    "sections": [
+                        {
+                            "name": ".text",
+                            "size": 43008,
+                            "entropy": 6.64,
+                            "hashes": {
+                                "MD5": "f015da09ad0b4dcfd3059eb365164044"
+                            }
+                        },
+                        {
+                            "name": ".rdata",
+                            "size": 9728,
+                            "entropy": 4.72,
+                            "hashes": {
+                                "MD5": "de4d6f114bf28ed1597a65246d75534f"
+                            }
+                        },
+                        {
+                            "name": ".data",
+                            "size": 4608,
+                            "entropy": 3.25,
+                            "hashes": {
+                                "MD5": "38e8ced058d35a9406083b61dc63d01e"
+                            }
+                        },
+                        {
+                            "name": ".rsrc",
+                            "size": 258048,
+                            "entropy": 7.46,
+                            "hashes": {
+                                "MD5": "f65a9119739ac4c120e9997339c9365a"
+                            }
+                        },
+                        {
+                            "name": ".reloc",
+                            "size": 4096,
+                            "entropy": 4.28,
+                            "hashes": {
+                                "MD5": "538a4f2859a329f2769717ea9ad676b2"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--eff78924-f1ee-4834-bcb1-e5515fc834fa",
+            "created": "2022-08-29T19:13:33.006597Z",
+            "modified": "2022-08-29T19:13:33.006597Z",
+            "name": "MD5 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.md5 = 'f9cfcd12a4786841168277361b653fcd']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:13:33.006597Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7447fc15-12ef-4207-98ba-9c441bcb19e5",
+            "created": "2022-08-29T19:13:33.008016Z",
+            "modified": "2022-08-29T19:13:33.008016Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--eff78924-f1ee-4834-bcb1-e5515fc834fa",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--407c053b-2d0c-49de-809b-facdea403118",
+            "created": "2022-08-29T19:13:33.008859Z",
+            "modified": "2022-08-29T19:13:33.008859Z",
+            "name": "SHA1 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.sha1 = '68c09cc3098e86eecf1d5fca31eb82f5f127dc94']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:13:33.008859Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ca1b9900-e7a1-4956-89e4-72ef5c116a59",
+            "created": "2022-08-29T19:13:33.010444Z",
+            "modified": "2022-08-29T19:13:33.010444Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--407c053b-2d0c-49de-809b-facdea403118",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4faedf9d-4994-4201-9a04-f85030722e01",
+            "created": "2022-08-29T19:13:33.01131Z",
+            "modified": "2022-08-29T19:13:33.01131Z",
+            "name": "SHA256 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.sha256 = 'f5a0b5b7892adbca1bce723fd952544006cfa8f05a9888f77544416287e99a8b']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:13:33.01131Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--65387ebf-f91e-46fe-8201-f0f4d8970b09",
+            "created": "2022-08-29T19:13:33.013554Z",
+            "modified": "2022-08-29T19:13:33.013554Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--4faedf9d-4994-4201-9a04-f85030722e01",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3c58c72b-e540-4347-add6-7a1287c8963f",
+            "created": "2022-08-29T19:13:33.014729Z",
+            "modified": "2022-08-29T19:13:33.014729Z",
+            "name": "Vhash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.vhash = '135056655d15751az459z3sz1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:13:33.014729Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fe2b8cf4-c10b-408e-b180-1760231b1bcc",
+            "created": "2022-08-29T19:13:33.016238Z",
+            "modified": "2022-08-29T19:13:33.016238Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--3c58c72b-e540-4347-add6-7a1287c8963f",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--fcad35ca-662e-4acf-9cfa-2b19d93a6b21",
+            "created": "2022-08-29T19:13:33.016626Z",
+            "modified": "2022-08-29T19:13:33.016626Z",
+            "name": "ssdeep",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.ssdeep = '6144:gHRAXqUeeRrYDzYgnu9EUex/+vbGset1ZYZJ4G28GMioE+aqb:6RAx7YDzfuMZ+M2zOxl4']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:13:33.016626Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7f3b0f1c-02df-4e70-b787-0459dc02b13c",
+            "created": "2022-08-29T19:13:33.0179Z",
+            "modified": "2022-08-29T19:13:33.0179Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--fcad35ca-662e-4acf-9cfa-2b19d93a6b21",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259",
+            "created": "2022-08-29T19:13:33.018282Z",
+            "modified": "2022-08-29T19:13:33.018282Z",
+            "name": "VirusTotal",
+            "report_types": [
+                "malware"
+            ],
+            "published": "2021-12-26T08:50:37Z",
+            "object_refs": [
+                "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--43cf1a5e-8f20-4586-9657-645eb0b50b9c",
+            "created": "2022-08-29T19:13:34.844661Z",
+            "modified": "2022-08-29T19:13:34.844661Z",
+            "relationship_type": "derived-from",
+            "source_ref": "file--93bb91c0-fb0e-52a7-b0c8-4c247a1f4458",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b279403a-0b3b-4cf4-9184-576fa7e53b61",
+            "created": "2022-08-29T19:13:34.845166Z",
+            "modified": "2022-08-29T19:13:34.845166Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--eff78924-f1ee-4834-bcb1-e5515fc834fa",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bbaab8dc-0e01-4a06-a0d7-1b11afe48d1a",
+            "created": "2022-08-29T19:13:34.845574Z",
+            "modified": "2022-08-29T19:13:34.845574Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--407c053b-2d0c-49de-809b-facdea403118",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3daae439-bda0-4360-9a31-af444ba7bae2",
+            "created": "2022-08-29T19:13:34.845942Z",
+            "modified": "2022-08-29T19:13:34.845942Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--4faedf9d-4994-4201-9a04-f85030722e01",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1fe19f70-364f-40c1-9170-6c9fb5d0ce0d",
+            "created": "2022-08-29T19:13:34.846346Z",
+            "modified": "2022-08-29T19:13:34.846346Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--3c58c72b-e540-4347-add6-7a1287c8963f",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7f9fed43-8623-49ef-9744-aeea16ee37c2",
+            "created": "2022-08-29T19:13:34.846723Z",
+            "modified": "2022-08-29T19:13:34.846723Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--fcad35ca-662e-4acf-9cfa-2b19d93a6b21",
+            "target_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--584dd783-fb70-4bab-b32f-fee321a37c18",
+            "created": "2022-08-29T19:13:34.847119Z",
+            "modified": "2022-08-29T19:13:34.847119Z",
+            "relationship_type": "related-to",
+            "source_ref": "report--1058d1bd-cf80-4579-a7a8-ba01337c1259",
+            "target_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--2c99c168-6b63-489d-8dee-d0bae1643902",
+            "created": "2022-08-29T19:13:32.425236Z",
+            "modified": "2022-08-29T19:13:32.425236Z",
+            "name": "ffforward",
+            "identity_class": "individual"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--4be48d20-2b1d-410b-a8f1-f04903bb5760",
+            "created": "2022-08-29T19:13:34.848434Z",
+            "modified": "2022-08-29T19:13:34.848434Z",
+            "name": "MalwareBazaar",
+            "report_types": [
+                "malware"
+            ],
+            "published": "2021-12-23T15:50:19Z",
+            "object_refs": [
+                "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--62e080fe-daab-4d32-bfcd-a6190d940e2a",
+            "created": "2022-08-29T19:13:34.848922Z",
+            "modified": "2022-08-29T19:13:34.848922Z",
+            "name": "trickbot",
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": true
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ba7463a1-72e9-4fff-8e41-340e1af035f8",
+            "created": "2022-08-29T19:13:34.849339Z",
+            "modified": "2022-08-29T19:13:34.849339Z",
+            "relationship_type": "related-to",
+            "source_ref": "identity--2c99c168-6b63-489d-8dee-d0bae1643902",
+            "target_ref": "report--4be48d20-2b1d-410b-a8f1-f04903bb5760"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--33f1f11f-9f80-4827-8948-c5ba8f971551",
+            "created": "2022-08-29T19:13:34.849757Z",
+            "modified": "2022-08-29T19:13:34.849757Z",
+            "relationship_type": "related-to",
+            "source_ref": "malware--62e080fe-daab-4d32-bfcd-a6190d940e2a",
+            "target_ref": "report--4be48d20-2b1d-410b-a8f1-f04903bb5760"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d458f9cb-23b8-4204-817c-ce48adbb8e7f",
+            "created": "2022-08-29T19:13:34.850096Z",
+            "modified": "2022-08-29T19:13:34.850096Z",
+            "relationship_type": "variant-of",
+            "source_ref": "malware--cbc866a1-ea77-4a13-b1d5-f932cb2f63ee",
+            "target_ref": "malware--62e080fe-daab-4d32-bfcd-a6190d940e2a"
+        }
+    ]
+}

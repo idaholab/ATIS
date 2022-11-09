@@ -1,0 +1,848 @@
+{
+    "type": "bundle",
+    "id": "bundle--b52d5c43-2831-4bab-8f33-259c89932743",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "created": "2022-08-29T19:08:49.240669Z",
+            "modified": "2022-08-29T19:08:49.240669Z",
+            "name": "b7cbc5e5dc182c8d99809cd64d36734abeb6bfac15e6efc2ebcc2c57254bf172",
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false,
+            "sample_refs": [
+                "file--2e45ee7d-c817-560d-8c75-b37410c44de6"
+            ]
+        },
+        {
+            "type": "file",
+            "spec_version": "2.1",
+            "id": "file--2e45ee7d-c817-560d-8c75-b37410c44de6",
+            "hashes": {
+                "MD5": "8402ab33eafb84178069f8f490ca604d",
+                "SHA-1": "516c7a538e93f7cf4bff29196511f94e5fbb5a40",
+                "SHA-256": "b7cbc5e5dc182c8d99809cd64d36734abeb6bfac15e6efc2ebcc2c57254bf172",
+                "SSDEEP": "6144:jo5N5OazOZaTDWlVnrchrahdOxveC2wo80/agxb0zLz4qM:jmSuOcHmnYhrDMTrban4qM"
+            },
+            "name": "b7cbc5e5dc182c8d99809cd64d36734abeb6bfac15e6efc2ebcc2c57254bf172.exe",
+            "extensions": {
+                "windows-pebinary-ext": {
+                    "pe_type": "exe",
+                    "imphash": "f3ca748f76db44ff1430515217457e6d",
+                    "number_of_sections": 5,
+                    "time_date_stamp": "2019-01-28T05:59:51Z",
+                    "sections": [
+                        {
+                            "name": ".text",
+                            "size": 72704,
+                            "entropy": 5.25,
+                            "hashes": {
+                                "MD5": "12f19d7428a43d3965e2563328230329"
+                            }
+                        },
+                        {
+                            "name": ".rdata",
+                            "size": 125440,
+                            "entropy": 4.63,
+                            "hashes": {
+                                "MD5": "34cec679534702244ad1e0aa4234b7ce"
+                            }
+                        },
+                        {
+                            "name": ".data",
+                            "size": 163840,
+                            "entropy": 8.0,
+                            "hashes": {
+                                "MD5": "91b33c10c039a0f9859e7dd080899c69"
+                            }
+                        },
+                        {
+                            "name": ".rsrc",
+                            "size": 1024,
+                            "entropy": 5.2,
+                            "hashes": {
+                                "MD5": "da9df5b3b1f9957cd836cfda102d7021"
+                            }
+                        },
+                        {
+                            "name": ".reloc",
+                            "size": 12800,
+                            "entropy": 6.69,
+                            "hashes": {
+                                "MD5": "a90501e99660d4ae55a115d5c2408936"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--9801c425-ea60-4d32-b227-e8585191b60a",
+            "created": "2022-08-29T19:08:49.241214Z",
+            "modified": "2022-08-29T19:08:49.241214Z",
+            "name": "MD5 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.md5 = '8402ab33eafb84178069f8f490ca604d']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.241214Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--53db26d1-676e-4863-b3e8-59176a4d7a15",
+            "created": "2022-08-29T19:08:49.256556Z",
+            "modified": "2022-08-29T19:08:49.256556Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--9801c425-ea60-4d32-b227-e8585191b60a",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b5ec5619-af0b-43e4-8b87-6f6eb63c4cb7",
+            "created": "2022-08-29T19:08:49.256956Z",
+            "modified": "2022-08-29T19:08:49.256956Z",
+            "name": "SHA1 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.sha1 = '516c7a538e93f7cf4bff29196511f94e5fbb5a40']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.256956Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3bc97afd-6fcd-431c-a360-9d61a307a194",
+            "created": "2022-08-29T19:08:49.258977Z",
+            "modified": "2022-08-29T19:08:49.258977Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--b5ec5619-af0b-43e4-8b87-6f6eb63c4cb7",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--04902e53-a9e8-41bd-9904-a5a13a3e3367",
+            "created": "2022-08-29T19:08:49.259339Z",
+            "modified": "2022-08-29T19:08:49.259339Z",
+            "name": "SHA256 Hash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.sha256 = 'b7cbc5e5dc182c8d99809cd64d36734abeb6bfac15e6efc2ebcc2c57254bf172']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.259339Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--046e386a-64c3-453f-b23f-18b61f72e9d4",
+            "created": "2022-08-29T19:08:49.261366Z",
+            "modified": "2022-08-29T19:08:49.261366Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--04902e53-a9e8-41bd-9904-a5a13a3e3367",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8b9d93e7-c081-4c44-8df7-ace31b9273d8",
+            "created": "2022-08-29T19:08:49.261716Z",
+            "modified": "2022-08-29T19:08:49.261716Z",
+            "name": "Vhash",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.vhash = '035056555d75556az1$z1d1z']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.261716Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a0c88269-1691-47aa-847a-b93647f54941",
+            "created": "2022-08-29T19:08:49.263473Z",
+            "modified": "2022-08-29T19:08:49.263473Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--8b9d93e7-c081-4c44-8df7-ace31b9273d8",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3f997288-109c-4e05-a2ea-9a80681cc378",
+            "created": "2022-08-29T19:08:49.263818Z",
+            "modified": "2022-08-29T19:08:49.263818Z",
+            "name": "ssdeep",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[file:hashes.ssdeep = '6144:jo5N5OazOZaTDWlVnrchrahdOxveC2wo80/agxb0zLz4qM:jmSuOcHmnYhrDMTrban4qM']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.263818Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--83cafbe0-e96c-484e-8a08-e8cca5e7fde6",
+            "created": "2022-08-29T19:08:49.26858Z",
+            "modified": "2022-08-29T19:08:49.26858Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--3f997288-109c-4e05-a2ea-9a80681cc378",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce",
+            "created": "2022-08-29T19:08:49.269092Z",
+            "modified": "2022-08-29T19:08:49.269092Z",
+            "name": "VirusTotal",
+            "report_types": [
+                "malware"
+            ],
+            "published": "2022-08-23T09:05:29Z",
+            "object_refs": [
+                "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+            ]
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--8c1142b5-d3fb-5d02-8f3d-64092d94a864",
+            "value": "181.129.146.34"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e6f64fa7-aeac-496f-ae93-06cd0b25c5bf",
+            "created": "2022-08-29T19:08:49.730483Z",
+            "modified": "2022-08-29T19:08:49.730483Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--8c1142b5-d3fb-5d02-8f3d-64092d94a864",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--ce6268d5-26d4-5548-8d61-339728fd4db9",
+            "value": "200.116.76.159"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e0dc52ae-284f-41d4-864a-de9bcb517abb",
+            "created": "2022-08-29T19:08:49.73386Z",
+            "modified": "2022-08-29T19:08:49.73386Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--ce6268d5-26d4-5548-8d61-339728fd4db9",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--07c8e52f-27f1-50c2-89c0-10b577fa638b",
+            "value": "23.216.147.76"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5c63d033-b19b-40a4-9e6f-991621be6cdb",
+            "created": "2022-08-29T19:08:49.736892Z",
+            "modified": "2022-08-29T19:08:49.736892Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--07c8e52f-27f1-50c2-89c0-10b577fa638b",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--79c16fc2-3e7b-53c7-8911-bef5055ca310",
+            "value": "8.253.139.120"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e4335b44-2278-4cb9-87aa-a11c8c8b1e71",
+            "created": "2022-08-29T19:08:49.739057Z",
+            "modified": "2022-08-29T19:08:49.739057Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--79c16fc2-3e7b-53c7-8911-bef5055ca310",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--5fd4282a-9e0e-41e1-8403-20f20d88a265",
+            "created": "2022-08-29T19:08:49.741038Z",
+            "modified": "2022-08-29T19:08:49.741038Z",
+            "name": "IPv4 Addresses",
+            "indicator_types": [
+                "anamolous-activity"
+            ],
+            "pattern": "[ ipv4-addr:value = '181.129.146.34' OR ipv4-addr:value = '200.116.76.159' OR ipv4-addr:value = '23.216.147.76' OR ipv4-addr:value = '8.253.139.120' ]",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2022-08-29T19:08:49.741038Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e9eea360-b0be-4994-9ab7-550a554a1479",
+            "created": "2022-08-29T19:08:49.770944Z",
+            "modified": "2022-08-29T19:08:49.770944Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--5fd4282a-9e0e-41e1-8403-20f20d88a265",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--99d556c7-eec1-46f8-9f86-a07f9805092b",
+            "created": "2022-08-29T19:08:56.001695Z",
+            "modified": "2022-08-29T19:08:56.001695Z",
+            "name": "Process Injection MITRE T1055",
+            "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. \nThere are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. \nMore sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel. ",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1055/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--375d5f3e-9d3f-4e97-9f32-b444640928ca",
+            "created": "2022-08-29T19:08:56.002392Z",
+            "modified": "2022-08-29T19:08:56.002392Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--99d556c7-eec1-46f8-9f86-a07f9805092b"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--07890f45-3386-4ae8-8231-e5d7bb4f5142",
+            "created": "2022-08-29T19:08:56.002765Z",
+            "modified": "2022-08-29T19:08:56.002765Z",
+            "name": "File and Directory Discovery MITRE T1083",
+            "description": "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. Adversaries may use the information from File and Directory Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nMany command shell utilities can be used to obtain this information. Examples include dir, tree, ls, find, and locate. Custom tools may also be used to gather file and directory information and interact with the Native API. Adversaries may also leverage a Network Device CLI on network devices to gather file and directory information.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1083/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a2394b31-e092-4bf4-a7b2-d8f0bd145776",
+            "created": "2022-08-29T19:08:56.00443Z",
+            "modified": "2022-08-29T19:08:56.00443Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--07890f45-3386-4ae8-8231-e5d7bb4f5142"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--340373f1-e1b0-473f-b280-72ea8c46b978",
+            "created": "2022-08-29T19:08:56.004828Z",
+            "modified": "2022-08-29T19:08:56.004828Z",
+            "name": "Process Discovery MITRE T1057",
+            "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Adversaries may use the information from Process Discovery during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\nIn Windows environments, adversaries could obtain details on running processes using the Tasklist utility via cmd or Get-Process via PowerShell. Information about processes can also be extracted from the output of Native API calls such as CreateToolhelp32Snapshot. In Mac and Linux, this is accomplished with the ps command. Adversaries may also opt to enumerate processes via /proc.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1057/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--902e020a-25b3-4d0f-af57-ab32d89bbae0",
+            "created": "2022-08-29T19:08:56.005267Z",
+            "modified": "2022-08-29T19:08:56.005267Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--340373f1-e1b0-473f-b280-72ea8c46b978"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--3ed37b91-b612-4bad-a719-245aaa16ea65",
+            "created": "2022-08-29T19:08:56.005544Z",
+            "modified": "2022-08-29T19:08:56.005544Z",
+            "name": "Query Registry MITRE T1012",
+            "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software.\nThe Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the Reg utility, though other means to access the Registry exist. Some of the information may help adversaries to further their operation within a network. Adversaries may use the information from Query Registry during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1012/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--db5a3e2f-b6b8-4b36-b41c-e944e50867ea",
+            "created": "2022-08-29T19:08:56.005842Z",
+            "modified": "2022-08-29T19:08:56.005842Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--3ed37b91-b612-4bad-a719-245aaa16ea65"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--7f5ee4ff-69ca-4a15-ab86-5f39a6be0f2f",
+            "created": "2022-08-29T19:08:56.006123Z",
+            "modified": "2022-08-29T19:08:56.006123Z",
+            "name": "Masquerading MITRE T1036",
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools. Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names.\nRenaming abusable system utilities to evade security monitoring is also a form of Masquerading.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1036/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e6a2fa2d-9b5e-4137-9d59-3b16a4be635d",
+            "created": "2022-08-29T19:08:56.006651Z",
+            "modified": "2022-08-29T19:08:56.006651Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--7f5ee4ff-69ca-4a15-ab86-5f39a6be0f2f"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--929829c9-fbd3-46a1-8861-1409596f75d2",
+            "created": "2022-08-29T19:08:56.007012Z",
+            "modified": "2022-08-29T19:08:56.007012Z",
+            "name": "File Deletion MITRE T1070",
+            "description": "Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools, or other non-native files dropped or created on a system by an adversary (ex: Ingress Tool Transfer) may leave traces to indicate to what was done within a network and how. Removal of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\nThere are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well. Examples of built-in Command and Scripting Interpreter functions include del on Windows and rm or unlink on Linux and macOS.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1070/004/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f0fe7ed7-72d1-4797-b8c7-9487c46ba59c",
+            "created": "2022-08-29T19:08:56.007694Z",
+            "modified": "2022-08-29T19:08:56.007694Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--929829c9-fbd3-46a1-8861-1409596f75d2"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--ea956ae7-5b23-4d20-a6da-4294a985f630",
+            "created": "2022-08-29T19:08:56.007939Z",
+            "modified": "2022-08-29T19:08:56.007939Z",
+            "name": "Bypass User Account Control MITRE T1548",
+            "description": "Adversaries may bypass UAC mechanisms to elevate process privileges on system. Windows User Account Control (UAC) allows a program to elevate its privileges (tracked as integrity levels ranging from low to high) to perform a task under administrator-level permissions, possibly by prompting the user for confirmation. The impact to the user ranges from denying the operation under high enforcement to allowing the user to perform the action if they are in the local administrators group and click through the prompt or allowing them to enter an administrator password to complete the action.\nIf the UAC protection level of a computer is set to anything but the highest level, certain Windows programs can elevate privileges or execute some elevated Component Object Model objects without prompting the user through the UAC notification box. An example of this is use of Rundll32 to load a specifically crafted DLL which loads an auto-elevated Component Object Model object and performs a file operation in a protected directory which would typically require elevated access. Malicious software may also be injected into a trusted process to gain elevated privileges without prompting a user.\nMany methods have been discovered to bypass UAC. The Github readme page for UACME contains an extensive list of methods that have been discovered and implemented, but may not be a comprehensive list of bypasses. Additional bypass methods are regularly discovered and some used in the wild, such as:\n\neventvwr.exe can auto-elevate and execute a specified binary or script.\n\nAnother bypass is possible through some lateral movement techniques if credentials for an account with administrator privileges are known, since UAC is a single system security mechanism, and the privilege or integrity of a process running on one system will be unknown on remote systems and default to high integrity.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1548/002/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--55197de4-7560-40bf-af62-fec3adedffb2",
+            "created": "2022-08-29T19:08:56.008353Z",
+            "modified": "2022-08-29T19:08:56.008353Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--ea956ae7-5b23-4d20-a6da-4294a985f630"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--0e2e3d5d-0d27-4c16-aed8-9a5efc04654b",
+            "created": "2022-08-29T19:08:56.008704Z",
+            "modified": "2022-08-29T19:08:56.008704Z",
+            "name": "Disable or Modify Tools MITRE T1562",
+            "description": "Adversaries may modify and/or disable security tools to avoid possible detection of their malware/tools and activities. This may take the many forms, such as killing security software processes or services, modifying / deleting Registry keys or configuration files so that tools do not operate properly, or other methods to interfere with security tools scanning or reporting information.\nAdversaries may also tamper with artifacts deployed and utilized by security tools. Security tools may make dynamic changes to system components in order to maintain visibility into specific events. For example, security products may load their own modules and/or modify those loaded by processes to facilitate data collection. Similar to Indicator Blocking, adversaries may unhook or otherwise modify these features added by tools (especially those that exist in userland or are otherwise potentially accessible to adversaries) to avoid detection.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1562/001/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d14dd6e2-5c4d-4462-98a4-5c6afced5b1c",
+            "created": "2022-08-29T19:08:56.00912Z",
+            "modified": "2022-08-29T19:08:56.00912Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--0e2e3d5d-0d27-4c16-aed8-9a5efc04654b"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--ee2e3bef-f9ab-4d2e-8696-fe666a653fcd",
+            "created": "2022-08-29T19:08:56.009488Z",
+            "modified": "2022-08-29T19:08:56.009488Z",
+            "name": "Windows Service MITRE T1543",
+            "description": "Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part of persistence. When Windows boots up, it starts programs or applications called services that perform background system functions. Windows service configuration information, including the file path to the service's executable or recovery programs/commands, is stored in the Windows Registry.\nAdversaries may install a new service or modify an existing service to execute at startup in order to persist on a system. Service configurations can be set or modified using system utilities (such as sc.exe), by directly modifying the Registry, or by interacting directly with the Windows API. \nAdversaries may also use services to install and execute malicious drivers. For example, after dropping a driver file (ex: .sys) to disk, the payload can be loaded and registered via Native API functions such as CreateServiceW() (or manually via functions such as ZwLoadDriver() and ZwSetValueKey()), by creating the required service Registry values (i.e. Modify Registry), or by using command-line utilities such as PnPUtil.exe. Adversaries may leverage these drivers as Rootkits to hide the presence of malicious activity on a system. Adversaries may also load a signed yet vulnerable driver onto a compromised machine (known as \"Bring Your Own Vulnerable Driver\" (BYOVD)) as part of Exploitation for Privilege Escalation.\nServices may be created with administrator privileges but are executed under SYSTEM privileges, so an adversary may also use a service to escalate privileges. Adversaries may also directly start services through Service Execution. To make detection analysis more challenging, malicious services may also incorporate Masquerade Task or Service (ex: using a service and/or payload name related to a legitimate OS or benign software component).",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1543/003/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4a666c24-470d-4a33-99ba-431f41c29687",
+            "created": "2022-08-29T19:08:56.00989Z",
+            "modified": "2022-08-29T19:08:56.00989Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--ee2e3bef-f9ab-4d2e-8696-fe666a653fcd"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--1f5b7084-e6f6-4111-a388-bbf9d3a136e5",
+            "created": "2022-08-29T19:08:56.010239Z",
+            "modified": "2022-08-29T19:08:56.010239Z",
+            "name": "Virtualization/Sandbox Evasion MITRE T1497",
+            "description": "Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from Virtualization/Sandbox Evasion during automated discovery to shape follow-on behaviors.\nAdversaries may use several methods to accomplish Virtualization/Sandbox Evasion such as checking for security monitoring tools (e.g., Sysinternals, Wireshark, etc.) or other system artifacts associated with analysis or virtualization. Adversaries may also check for legitimate user activity to help determine if it is in an analysis environment. Additional methods include use of sleep timers or loops within malware code to avoid operating within a temporary sandbox.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1497/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2dbe9d0f-3711-47e8-9b2b-ab0504f2df47",
+            "created": "2022-08-29T19:08:56.010733Z",
+            "modified": "2022-08-29T19:08:56.010733Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "attack-pattern--1f5b7084-e6f6-4111-a388-bbf9d3a136e5"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c1eb4577-8178-41a4-96fc-36ed9ac496f5",
+            "created": "2022-08-29T19:08:56.011153Z",
+            "modified": "2022-08-29T19:08:56.011153Z",
+            "relationship_type": "derived-from",
+            "source_ref": "file--2e45ee7d-c817-560d-8c75-b37410c44de6",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4ac7b893-4926-4794-ae9e-92e34dbc24e4",
+            "created": "2022-08-29T19:08:56.012311Z",
+            "modified": "2022-08-29T19:08:56.012311Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--9801c425-ea60-4d32-b227-e8585191b60a",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a851782e-838f-47ed-99ec-179d4292c464",
+            "created": "2022-08-29T19:08:56.012695Z",
+            "modified": "2022-08-29T19:08:56.012695Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--b5ec5619-af0b-43e4-8b87-6f6eb63c4cb7",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d3053a55-da1b-4d86-930b-5abbe17af800",
+            "created": "2022-08-29T19:08:56.013043Z",
+            "modified": "2022-08-29T19:08:56.013043Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--04902e53-a9e8-41bd-9904-a5a13a3e3367",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--507911a7-4588-4bef-b1b2-ee5b157b4e45",
+            "created": "2022-08-29T19:08:56.013409Z",
+            "modified": "2022-08-29T19:08:56.013409Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--8b9d93e7-c081-4c44-8df7-ace31b9273d8",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b0b67d29-3e5f-42de-882c-4e8d4a87380e",
+            "created": "2022-08-29T19:08:56.013746Z",
+            "modified": "2022-08-29T19:08:56.013746Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--3f997288-109c-4e05-a2ea-9a80681cc378",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0e4194b5-caad-41cd-b2b5-4831687a0688",
+            "created": "2022-08-29T19:08:56.01412Z",
+            "modified": "2022-08-29T19:08:56.01412Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--8c1142b5-d3fb-5d02-8f3d-64092d94a864",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--438fc160-ff9b-4874-b765-dc89b30d3348",
+            "created": "2022-08-29T19:08:56.014529Z",
+            "modified": "2022-08-29T19:08:56.014529Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--ce6268d5-26d4-5548-8d61-339728fd4db9",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fd1f88c8-599e-4cee-a209-76b30f6b37c9",
+            "created": "2022-08-29T19:08:56.015259Z",
+            "modified": "2022-08-29T19:08:56.015259Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--07c8e52f-27f1-50c2-89c0-10b577fa638b",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a2ef7571-d656-4ec3-9226-12dae1005cff",
+            "created": "2022-08-29T19:08:56.015644Z",
+            "modified": "2022-08-29T19:08:56.015644Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--79c16fc2-3e7b-53c7-8911-bef5055ca310",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2f48a406-59ef-40ad-8883-746db69855f9",
+            "created": "2022-08-29T19:08:56.016006Z",
+            "modified": "2022-08-29T19:08:56.016006Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--5fd4282a-9e0e-41e1-8403-20f20d88a265",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--feb8c26d-ae51-4ba0-ad60-f94230f3b1b6",
+            "created": "2022-08-29T19:08:56.016636Z",
+            "modified": "2022-08-29T19:08:56.016636Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--99d556c7-eec1-46f8-9f86-a07f9805092b",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d5014ddc-9c0c-4f36-aa37-69634504876a",
+            "created": "2022-08-29T19:08:56.017014Z",
+            "modified": "2022-08-29T19:08:56.017014Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--07890f45-3386-4ae8-8231-e5d7bb4f5142",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--31b5a5f3-7000-4d96-a08a-101da8ce06eb",
+            "created": "2022-08-29T19:08:56.01742Z",
+            "modified": "2022-08-29T19:08:56.01742Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--340373f1-e1b0-473f-b280-72ea8c46b978",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e2955509-a445-4975-b07f-ca4fd70e9fbc",
+            "created": "2022-08-29T19:08:56.017785Z",
+            "modified": "2022-08-29T19:08:56.017785Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--3ed37b91-b612-4bad-a719-245aaa16ea65",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e09d3158-8c9e-4492-b21e-e33ce21cfa37",
+            "created": "2022-08-29T19:08:56.018186Z",
+            "modified": "2022-08-29T19:08:56.018186Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--7f5ee4ff-69ca-4a15-ab86-5f39a6be0f2f",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6325c2ae-c3c3-4b76-823a-68fbb2097459",
+            "created": "2022-08-29T19:08:56.01859Z",
+            "modified": "2022-08-29T19:08:56.01859Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--929829c9-fbd3-46a1-8861-1409596f75d2",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--27c652e5-d19c-478d-a0cb-cf0020184e9a",
+            "created": "2022-08-29T19:08:56.01896Z",
+            "modified": "2022-08-29T19:08:56.01896Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--ea956ae7-5b23-4d20-a6da-4294a985f630",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--237655e1-8ed9-4739-8b5d-6347e0092a82",
+            "created": "2022-08-29T19:08:56.019361Z",
+            "modified": "2022-08-29T19:08:56.019361Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--0e2e3d5d-0d27-4c16-aed8-9a5efc04654b",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a9f69136-ee56-4c30-8a5f-8fe0f3f2a222",
+            "created": "2022-08-29T19:08:56.01975Z",
+            "modified": "2022-08-29T19:08:56.01975Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--ee2e3bef-f9ab-4d2e-8696-fe666a653fcd",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--33d3faf8-e912-4d84-ad65-f3aba01f55c5",
+            "created": "2022-08-29T19:08:56.020143Z",
+            "modified": "2022-08-29T19:08:56.020143Z",
+            "relationship_type": "derived-from",
+            "source_ref": "attack-pattern--1f5b7084-e6f6-4111-a388-bbf9d3a136e5",
+            "target_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--92ca4e47-a63c-493f-9b35-8e29996e02c1",
+            "created": "2022-08-29T19:08:56.020844Z",
+            "modified": "2022-08-29T19:08:56.020844Z",
+            "relationship_type": "related-to",
+            "source_ref": "report--415fc07e-3ae6-4df8-bfcd-527729f54cce",
+            "target_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--473317b5-4b8b-4df1-ada9-af7e8f013150",
+            "created": "2022-08-29T19:08:48.284352Z",
+            "modified": "2022-08-29T19:08:48.284352Z",
+            "name": "KdssSupport",
+            "identity_class": "individual"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--0748eb09-3906-4804-b4b5-61ccb5d2a923",
+            "created": "2022-08-29T19:08:56.02981Z",
+            "modified": "2022-08-29T19:08:56.02981Z",
+            "name": "MalwareBazaar",
+            "report_types": [
+                "malware"
+            ],
+            "published": "2022-07-08T09:22:51Z",
+            "object_refs": [
+                "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--f6bf3969-4e2a-4211-91d4-0216749180a6",
+            "created": "2022-08-29T19:08:56.030444Z",
+            "modified": "2022-08-29T19:08:56.030444Z",
+            "name": "trickbot",
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": true
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b460c5ad-fadd-465c-8b74-72ddad8922d9",
+            "created": "2022-08-29T19:08:56.030942Z",
+            "modified": "2022-08-29T19:08:56.030942Z",
+            "relationship_type": "related-to",
+            "source_ref": "identity--473317b5-4b8b-4df1-ada9-af7e8f013150",
+            "target_ref": "report--0748eb09-3906-4804-b4b5-61ccb5d2a923"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--48b1b0bd-e48b-4d8a-aed0-3f860ba37f1e",
+            "created": "2022-08-29T19:08:56.032747Z",
+            "modified": "2022-08-29T19:08:56.032747Z",
+            "relationship_type": "related-to",
+            "source_ref": "malware--f6bf3969-4e2a-4211-91d4-0216749180a6",
+            "target_ref": "report--0748eb09-3906-4804-b4b5-61ccb5d2a923"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3508ceb5-f8db-4084-b8d0-a5ebcfce070c",
+            "created": "2022-08-29T19:08:56.033279Z",
+            "modified": "2022-08-29T19:08:56.033279Z",
+            "relationship_type": "variant-of",
+            "source_ref": "malware--9cd5f0fa-d196-4813-8eea-e11dc8f0f070",
+            "target_ref": "malware--f6bf3969-4e2a-4211-91d4-0216749180a6"
+        }
+    ]
+}

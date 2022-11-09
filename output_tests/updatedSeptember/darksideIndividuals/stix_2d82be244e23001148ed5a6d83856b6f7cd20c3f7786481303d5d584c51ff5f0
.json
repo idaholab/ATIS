@@ -1,0 +1,3271 @@
+{
+    "type": "bundle",
+    "id": "bundle--5e244539-d086-4fd7-8cdc-9da2637ea8b2",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "created": "2021-09-09T23:20:22.055746Z",
+            "modified": "2021-09-09T23:20:22.055746Z",
+            "name": "2d82be244e23001148ed5a6d83856b6f7cd20c3f7786481303d5d584c51ff5f0",
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--320a411a-c3e6-4c81-8dec-45f84e9cb113",
+            "created": "2021-09-09T23:20:22.055996Z",
+            "modified": "2021-09-09T23:20:22.055996Z",
+            "name": "MD5 Hash",
+            "pattern": "[file:hashes.md5 = 'edb5670581d49771d180940c4d1179b1']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:22.055996Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ac3bfb7c-e75e-4123-ab46-d304ef339ec5",
+            "created": "2021-09-09T23:20:22.057019Z",
+            "modified": "2021-09-09T23:20:22.057019Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--320a411a-c3e6-4c81-8dec-45f84e9cb113",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b52976a8-7146-4345-843a-9ae0f9a2b93f",
+            "created": "2021-09-09T23:20:22.05723Z",
+            "modified": "2021-09-09T23:20:22.05723Z",
+            "name": "SHA1 Hash",
+            "pattern": "[file:hashes.sha1 = 'e691a8ecda87157a9cf96fbe4df8f819922e34db']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:22.05723Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--783f838a-c5c1-4cc6-8e49-cba550019ec9",
+            "created": "2021-09-09T23:20:22.058059Z",
+            "modified": "2021-09-09T23:20:22.058059Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--b52976a8-7146-4345-843a-9ae0f9a2b93f",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--99d64f31-492f-4ab0-b93f-b415f912d99d",
+            "created": "2021-09-09T23:20:22.058244Z",
+            "modified": "2021-09-09T23:20:22.058244Z",
+            "name": "SHA256 Hash",
+            "pattern": "[file:hashes.sha256 = '2d82be244e23001148ed5a6d83856b6f7cd20c3f7786481303d5d584c51ff5f0']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:22.058244Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9a28c271-99aa-4e52-ba40-979ad4f9a85d",
+            "created": "2021-09-09T23:20:22.059136Z",
+            "modified": "2021-09-09T23:20:22.059136Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--99d64f31-492f-4ab0-b93f-b415f912d99d",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8eaf6838-5974-487f-9707-db89e90d68df",
+            "created": "2021-09-09T23:20:22.059325Z",
+            "modified": "2021-09-09T23:20:22.059325Z",
+            "name": "Vhash",
+            "pattern": "[file:hashes.vhash = '05405666551d7d7bz1!z']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:22.059325Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e24a59a6-307c-483d-846b-d43fa79ae423",
+            "created": "2021-09-09T23:20:22.060134Z",
+            "modified": "2021-09-09T23:20:22.060134Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--8eaf6838-5974-487f-9707-db89e90d68df",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f70356ab-8cab-4092-a991-8450057ccf4a",
+            "created": "2021-09-09T23:20:22.060322Z",
+            "modified": "2021-09-09T23:20:22.060322Z",
+            "name": "ssdeep",
+            "pattern": "[file:hashes.ssdeep = '768:+SbBh8w2fxASeNwIXJSjqY1m5mFm7m6IcHqhc+aaeCfDOP:fXMmBJS2H5mFePIRleMD']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:22.060322Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--acc0fb4b-c11c-43eb-b6e7-d60ff15cfd7d",
+            "created": "2021-09-09T23:20:22.061379Z",
+            "modified": "2021-09-09T23:20:22.061379Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--f70356ab-8cab-4092-a991-8450057ccf4a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--dc81b539-1914-4b4c-8485-768acfe6d407",
+            "created": "2021-09-09T23:20:22.061585Z",
+            "modified": "2021-09-09T23:20:22.061585Z",
+            "name": "VirusTotal",
+            "report_types": [
+                "malware"
+            ],
+            "published": "2021-07-07T11:42:57Z",
+            "object_refs": [
+                "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+            ]
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--a620ce9f-1f74-4a10-b9d6-6d735196fe2f",
+            "created": "2021-09-09T23:20:22.061825Z",
+            "modified": "2021-09-09T23:20:22.061825Z",
+            "product": "Bkav",
+            "analysis_engine_version": "1.3.0.9899",
+            "submitted": "2021-07-06T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2be416bc-1da5-47a8-880b-08b1e62782af",
+            "created": "2021-09-09T23:20:22.062047Z",
+            "modified": "2021-09-09T23:20:22.062047Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--a620ce9f-1f74-4a10-b9d6-6d735196fe2f",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--43681735-1fbf-4fa2-8fe8-f1bed38f8c6f",
+            "created": "2021-09-09T23:20:22.062223Z",
+            "modified": "2021-09-09T23:20:22.062223Z",
+            "product": "Lionic",
+            "analysis_engine_version": "4.2",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--dcae9088-f239-4dbd-a5d2-336708d66f6d",
+            "created": "2021-09-09T23:20:22.062426Z",
+            "modified": "2021-09-09T23:20:22.062426Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--43681735-1fbf-4fa2-8fe8-f1bed38f8c6f",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--767d97ce-7ddb-4ae7-af77-c819741615a3",
+            "created": "2021-09-09T23:20:22.0626Z",
+            "modified": "2021-09-09T23:20:22.0626Z",
+            "product": "Elastic",
+            "analysis_engine_version": "4.0.25",
+            "submitted": "2021-07-06T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e224856e-2068-4751-ae56-f74e887c20e5",
+            "created": "2021-09-09T23:20:22.06284Z",
+            "modified": "2021-09-09T23:20:22.06284Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--767d97ce-7ddb-4ae7-af77-c819741615a3",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--c1f37216-5a94-4e07-98cd-70c918edc127",
+            "created": "2021-09-09T23:20:22.063021Z",
+            "modified": "2021-09-09T23:20:22.063021Z",
+            "product": "MicroWorld-eScan",
+            "analysis_engine_version": "14.0.409.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9e278c14-5a5c-44e6-9e74-a7a58f23b003",
+            "created": "2021-09-09T23:20:22.063229Z",
+            "modified": "2021-09-09T23:20:22.063229Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--c1f37216-5a94-4e07-98cd-70c918edc127",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--33d8d9a5-0968-4ffe-94c1-90eb2dd8161d",
+            "created": "2021-09-09T23:20:22.063403Z",
+            "modified": "2021-09-09T23:20:22.063403Z",
+            "product": "FireEye",
+            "analysis_engine_version": "32.44.1.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3c7ce550-7ea8-4e41-9cd6-88fd5cb826e7",
+            "created": "2021-09-09T23:20:22.063607Z",
+            "modified": "2021-09-09T23:20:22.063607Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--33d8d9a5-0968-4ffe-94c1-90eb2dd8161d",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--90c1c360-d837-493d-afed-a979592fd403",
+            "created": "2021-09-09T23:20:22.063781Z",
+            "modified": "2021-09-09T23:20:22.063781Z",
+            "product": "CAT-QuickHeal",
+            "analysis_engine_version": "14.00",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--157a115e-1812-40ad-991e-4ba430009b6f",
+            "created": "2021-09-09T23:20:22.063984Z",
+            "modified": "2021-09-09T23:20:22.063984Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--90c1c360-d837-493d-afed-a979592fd403",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2fd72daf-4621-47f0-9801-58ebb8e1404a",
+            "created": "2021-09-09T23:20:22.064156Z",
+            "modified": "2021-09-09T23:20:22.064156Z",
+            "product": "McAfee",
+            "analysis_engine_version": "6.0.6.653",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bf60a9b4-f8cf-45c5-abe6-0920c7d722e5",
+            "created": "2021-09-09T23:20:22.064359Z",
+            "modified": "2021-09-09T23:20:22.064359Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--2fd72daf-4621-47f0-9801-58ebb8e1404a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ce4a2d1c-d257-4f6a-b06d-aa653153dcf4",
+            "created": "2021-09-09T23:20:22.064533Z",
+            "modified": "2021-09-09T23:20:22.064533Z",
+            "product": "ALYac",
+            "analysis_engine_version": "1.1.3.1",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c77ad8c8-9fe8-4d57-8702-79f49f2348dd",
+            "created": "2021-09-09T23:20:22.064736Z",
+            "modified": "2021-09-09T23:20:22.064736Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--ce4a2d1c-d257-4f6a-b06d-aa653153dcf4",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ba6d8349-fb07-49a1-befb-b2922b48e80c",
+            "created": "2021-09-09T23:20:22.064908Z",
+            "modified": "2021-09-09T23:20:22.064908Z",
+            "product": "Malwarebytes",
+            "analysis_engine_version": "4.2.2.27",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--41da92fb-8e19-446f-b81c-c5e862df113a",
+            "created": "2021-09-09T23:20:22.065109Z",
+            "modified": "2021-09-09T23:20:22.065109Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--ba6d8349-fb07-49a1-befb-b2922b48e80c",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--503dd406-3e22-401e-951f-cf8efd73a9f2",
+            "created": "2021-09-09T23:20:22.06528Z",
+            "modified": "2021-09-09T23:20:22.06528Z",
+            "product": "Zillya",
+            "analysis_engine_version": "2.0.0.4403",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--98ace486-3a6e-4d9f-9f33-6fa1d3d8990d",
+            "created": "2021-09-09T23:20:22.065481Z",
+            "modified": "2021-09-09T23:20:22.065481Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--503dd406-3e22-401e-951f-cf8efd73a9f2",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--4e802449-104d-4102-9301-5c849b565587",
+            "created": "2021-09-09T23:20:22.065652Z",
+            "modified": "2021-09-09T23:20:22.065652Z",
+            "product": "Sangfor",
+            "analysis_engine_version": "2.9.0.0",
+            "submitted": "2021-06-25T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--72e0b469-4991-4c27-9022-3e3ae967298f",
+            "created": "2021-09-09T23:20:22.065854Z",
+            "modified": "2021-09-09T23:20:22.065854Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--4e802449-104d-4102-9301-5c849b565587",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--58b7c040-4f00-413a-ace8-bdc24ada4ae0",
+            "created": "2021-09-09T23:20:22.066027Z",
+            "modified": "2021-09-09T23:20:22.066027Z",
+            "product": "K7AntiVirus",
+            "analysis_engine_version": "11.192.37658",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f6ac24f0-689a-4a8d-a87d-c1cde6571c42",
+            "created": "2021-09-09T23:20:22.06623Z",
+            "modified": "2021-09-09T23:20:22.06623Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--58b7c040-4f00-413a-ace8-bdc24ada4ae0",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--f0d7c956-eb66-4741-b49c-21aab4ba5dd3",
+            "created": "2021-09-09T23:20:22.066403Z",
+            "modified": "2021-09-09T23:20:22.066403Z",
+            "product": "Alibaba",
+            "analysis_engine_version": "0.3.0.5",
+            "submitted": "2019-05-27T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d84cf0d2-a476-457a-b296-cd20dd2c2521",
+            "created": "2021-09-09T23:20:22.066606Z",
+            "modified": "2021-09-09T23:20:22.066606Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--f0d7c956-eb66-4741-b49c-21aab4ba5dd3",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--83b14e83-0589-4dd6-a1eb-a901a1919b43",
+            "created": "2021-09-09T23:20:22.066799Z",
+            "modified": "2021-09-09T23:20:22.066799Z",
+            "product": "K7GW",
+            "analysis_engine_version": "11.192.37660",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bb7d90d2-b6e5-4473-864b-859d91880312",
+            "created": "2021-09-09T23:20:22.067007Z",
+            "modified": "2021-09-09T23:20:22.067007Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--83b14e83-0589-4dd6-a1eb-a901a1919b43",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--3705c52d-a897-4bac-8ab9-6a230c9662dc",
+            "created": "2021-09-09T23:20:22.06718Z",
+            "modified": "2021-09-09T23:20:22.06718Z",
+            "product": "Cybereason",
+            "analysis_engine_version": "1.2.449",
+            "submitted": "2021-03-30T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--097b0f06-6fa3-462b-b057-614f7eeb7e9f",
+            "created": "2021-09-09T23:20:22.067382Z",
+            "modified": "2021-09-09T23:20:22.067382Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--3705c52d-a897-4bac-8ab9-6a230c9662dc",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--e3d3c88d-78a2-4013-a1ae-4252424ae985",
+            "created": "2021-09-09T23:20:22.067553Z",
+            "modified": "2021-09-09T23:20:22.067553Z",
+            "product": "BitDefenderTheta",
+            "analysis_engine_version": "7.2.37796.0",
+            "submitted": "2021-07-02T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6359e2ac-abb1-47b5-a438-44b827227d64",
+            "created": "2021-09-09T23:20:22.067753Z",
+            "modified": "2021-09-09T23:20:22.067753Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--e3d3c88d-78a2-4013-a1ae-4252424ae985",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2e084f11-024b-4173-9acd-8b8f2e7bcff0",
+            "created": "2021-09-09T23:20:22.067923Z",
+            "modified": "2021-09-09T23:20:22.067923Z",
+            "product": "Cyren",
+            "analysis_engine_version": "6.3.0.2",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1b88ae27-d8bd-4049-93e6-94f325acc85a",
+            "created": "2021-09-09T23:20:22.068125Z",
+            "modified": "2021-09-09T23:20:22.068125Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--2e084f11-024b-4173-9acd-8b8f2e7bcff0",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--46d2e805-fc45-4d2d-b5c6-d6d5d9e0cffd",
+            "created": "2021-09-09T23:20:22.068298Z",
+            "modified": "2021-09-09T23:20:22.068298Z",
+            "product": "SymantecMobileInsight",
+            "analysis_engine_version": "2.0",
+            "submitted": "2021-01-26T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c2546fb5-fb41-49b4-acdc-f85ac812d5a1",
+            "created": "2021-09-09T23:20:22.0685Z",
+            "modified": "2021-09-09T23:20:22.0685Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--46d2e805-fc45-4d2d-b5c6-d6d5d9e0cffd",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--0af7c3cb-8b39-4f17-9f36-030a473dcb83",
+            "created": "2021-09-09T23:20:22.068768Z",
+            "modified": "2021-09-09T23:20:22.068768Z",
+            "product": "Symantec",
+            "analysis_engine_version": "1.15.0.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3c331d66-3482-4a22-8a8c-b2b37aa8610d",
+            "created": "2021-09-09T23:20:22.069099Z",
+            "modified": "2021-09-09T23:20:22.069099Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--0af7c3cb-8b39-4f17-9f36-030a473dcb83",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--a9c3336b-4c6f-4c96-9f54-e111dfbfeb8b",
+            "created": "2021-09-09T23:20:22.069305Z",
+            "modified": "2021-09-09T23:20:22.069305Z",
+            "product": "ESET-NOD32",
+            "analysis_engine_version": "23589",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c3339ccd-2b8c-4889-824d-bd1cac87a342",
+            "created": "2021-09-09T23:20:22.06972Z",
+            "modified": "2021-09-09T23:20:22.06972Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--a9c3336b-4c6f-4c96-9f54-e111dfbfeb8b",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--99d255cb-dd21-43d5-a086-688b094d59ef",
+            "created": "2021-09-09T23:20:22.069906Z",
+            "modified": "2021-09-09T23:20:22.069906Z",
+            "product": "Baidu",
+            "analysis_engine_version": "1.0.0.2",
+            "submitted": "2019-03-18T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--98089b0a-c291-47ab-8bda-23921490666b",
+            "created": "2021-09-09T23:20:22.070144Z",
+            "modified": "2021-09-09T23:20:22.070144Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--99d255cb-dd21-43d5-a086-688b094d59ef",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--5863335b-da4b-4586-b13b-6ce889805eba",
+            "created": "2021-09-09T23:20:22.070422Z",
+            "modified": "2021-09-09T23:20:22.070422Z",
+            "product": "APEX",
+            "analysis_engine_version": "6.182",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d5b0aa2b-95c6-4011-b5c1-0366747d11ca",
+            "created": "2021-09-09T23:20:22.070693Z",
+            "modified": "2021-09-09T23:20:22.070693Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--5863335b-da4b-4586-b13b-6ce889805eba",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--b784bef9-b791-453b-ba57-d431be171002",
+            "created": "2021-09-09T23:20:22.070898Z",
+            "modified": "2021-09-09T23:20:22.070898Z",
+            "product": "Paloalto",
+            "analysis_engine_version": "1.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--53811dfd-52c6-4e51-b220-4de6f80b2da9",
+            "created": "2021-09-09T23:20:22.071114Z",
+            "modified": "2021-09-09T23:20:22.071114Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--b784bef9-b791-453b-ba57-d431be171002",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--f4ad6f39-b64e-4d2d-9e80-7f13ea7e6299",
+            "created": "2021-09-09T23:20:22.071296Z",
+            "modified": "2021-09-09T23:20:22.071296Z",
+            "product": "ClamAV",
+            "analysis_engine_version": "0.103.3.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--01932348-7463-4dfb-90a7-c566dd6aa04f",
+            "created": "2021-09-09T23:20:22.071514Z",
+            "modified": "2021-09-09T23:20:22.071514Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--f4ad6f39-b64e-4d2d-9e80-7f13ea7e6299",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--74f966a0-e2cd-4809-94ab-358e0b2eee17",
+            "created": "2021-09-09T23:20:22.071689Z",
+            "modified": "2021-09-09T23:20:22.071689Z",
+            "product": "Kaspersky",
+            "analysis_engine_version": "21.0.1.45",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--563cf68c-97e7-4243-8c14-7fefe6896e87",
+            "created": "2021-09-09T23:20:22.071894Z",
+            "modified": "2021-09-09T23:20:22.071894Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--74f966a0-e2cd-4809-94ab-358e0b2eee17",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--75bfd9f6-1be2-49d9-973f-67c14facd98a",
+            "created": "2021-09-09T23:20:22.072066Z",
+            "modified": "2021-09-09T23:20:22.072066Z",
+            "product": "BitDefender",
+            "analysis_engine_version": "7.2",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e09ee599-9ed6-4fa9-8a65-49a4b0783815",
+            "created": "2021-09-09T23:20:22.072269Z",
+            "modified": "2021-09-09T23:20:22.072269Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--75bfd9f6-1be2-49d9-973f-67c14facd98a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--1d0a1375-309a-49dc-b875-502eb18ac566",
+            "created": "2021-09-09T23:20:22.072438Z",
+            "modified": "2021-09-09T23:20:22.072438Z",
+            "product": "NANO-Antivirus",
+            "analysis_engine_version": "1.0.146.25311",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--07c00c1c-a944-4d1a-982a-81d12566af7e",
+            "created": "2021-09-09T23:20:22.07264Z",
+            "modified": "2021-09-09T23:20:22.07264Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--1d0a1375-309a-49dc-b875-502eb18ac566",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--3ca16fee-6829-44a2-8e9e-f28f56dde5a9",
+            "created": "2021-09-09T23:20:22.072812Z",
+            "modified": "2021-09-09T23:20:22.072812Z",
+            "product": "SUPERAntiSpyware",
+            "analysis_engine_version": "5.6.0.1032",
+            "submitted": "2021-07-03T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d4f60390-e83a-473a-87c0-cee0a36917f3",
+            "created": "2021-09-09T23:20:22.073016Z",
+            "modified": "2021-09-09T23:20:22.073016Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--3ca16fee-6829-44a2-8e9e-f28f56dde5a9",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--81ab43b1-1369-483e-8ce6-32db0909d4dc",
+            "created": "2021-09-09T23:20:22.073188Z",
+            "modified": "2021-09-09T23:20:22.073188Z",
+            "product": "Avast",
+            "analysis_engine_version": "21.1.5827.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--149c109d-8b51-4f32-afb5-85a3fbd2fb4f",
+            "created": "2021-09-09T23:20:22.073393Z",
+            "modified": "2021-09-09T23:20:22.073393Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--81ab43b1-1369-483e-8ce6-32db0909d4dc",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--51a53d98-50cc-410b-a84d-91c9d3325f40",
+            "created": "2021-09-09T23:20:22.073567Z",
+            "modified": "2021-09-09T23:20:22.073567Z",
+            "product": "Tencent",
+            "analysis_engine_version": "1.0.0.1",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9a25f139-09a3-4236-adfa-b3c4c9dfc175",
+            "created": "2021-09-09T23:20:22.07377Z",
+            "modified": "2021-09-09T23:20:22.07377Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--51a53d98-50cc-410b-a84d-91c9d3325f40",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--0e496727-16bf-415c-bf1b-9ebbc6c8dcf2",
+            "created": "2021-09-09T23:20:22.073943Z",
+            "modified": "2021-09-09T23:20:22.073943Z",
+            "product": "Ad-Aware",
+            "analysis_engine_version": "3.0.21.179",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ad22af20-5d25-4b14-bbd0-0699cb5ea865",
+            "created": "2021-09-09T23:20:22.074149Z",
+            "modified": "2021-09-09T23:20:22.074149Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--0e496727-16bf-415c-bf1b-9ebbc6c8dcf2",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--4ecb20b2-1b53-4741-8ce2-008fb9c4bbe8",
+            "created": "2021-09-09T23:20:22.07432Z",
+            "modified": "2021-09-09T23:20:22.07432Z",
+            "product": "Trustlook",
+            "analysis_engine_version": "1.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8c9337c6-2973-4717-b2d7-8c7194b8f72f",
+            "created": "2021-09-09T23:20:22.074521Z",
+            "modified": "2021-09-09T23:20:22.074521Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--4ecb20b2-1b53-4741-8ce2-008fb9c4bbe8",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ce0a4a5b-921a-4dd5-a6d4-5af5267bfc27",
+            "created": "2021-09-09T23:20:22.074692Z",
+            "modified": "2021-09-09T23:20:22.074692Z",
+            "product": "Emsisoft",
+            "analysis_engine_version": "2018.12.0.1641",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--20eb66b4-af0f-44e9-af1d-e19ebd72ef96",
+            "created": "2021-09-09T23:20:22.074926Z",
+            "modified": "2021-09-09T23:20:22.074926Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--ce0a4a5b-921a-4dd5-a6d4-5af5267bfc27",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--0c5a66fd-6655-4f3a-9c10-6b476810c0bd",
+            "created": "2021-09-09T23:20:22.0751Z",
+            "modified": "2021-09-09T23:20:22.0751Z",
+            "product": "Comodo",
+            "analysis_engine_version": "33691",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--15e8a1f8-581e-446a-96c5-1a6a7de9683a",
+            "created": "2021-09-09T23:20:22.075369Z",
+            "modified": "2021-09-09T23:20:22.075369Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--0c5a66fd-6655-4f3a-9c10-6b476810c0bd",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--65fa5197-b36d-4ec0-894a-de6bfd9d4bce",
+            "created": "2021-09-09T23:20:22.075542Z",
+            "modified": "2021-09-09T23:20:22.075542Z",
+            "product": "F-Secure",
+            "analysis_engine_version": "12.0.86.52",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9d4b99d6-9be4-41aa-9a33-42a0bea7d639",
+            "created": "2021-09-09T23:20:22.075745Z",
+            "modified": "2021-09-09T23:20:22.075745Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--65fa5197-b36d-4ec0-894a-de6bfd9d4bce",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--62ee1f2e-28c2-4606-b380-d23dc6d6bc31",
+            "created": "2021-09-09T23:20:22.075915Z",
+            "modified": "2021-09-09T23:20:22.075915Z",
+            "product": "DrWeb",
+            "analysis_engine_version": "7.0.49.9080",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0a5f35a2-89df-4604-aa2b-2c7c47ece58b",
+            "created": "2021-09-09T23:20:22.076116Z",
+            "modified": "2021-09-09T23:20:22.076116Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--62ee1f2e-28c2-4606-b380-d23dc6d6bc31",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2eb7304c-f13e-49fc-b568-fca00d7b6adb",
+            "created": "2021-09-09T23:20:22.076285Z",
+            "modified": "2021-09-09T23:20:22.076285Z",
+            "product": "VIPRE",
+            "analysis_engine_version": "93842",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--656bf4ac-a71b-41d3-b8fe-323dc3341127",
+            "created": "2021-09-09T23:20:22.076485Z",
+            "modified": "2021-09-09T23:20:22.076485Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--2eb7304c-f13e-49fc-b568-fca00d7b6adb",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2b8a5006-3dc4-43fe-af73-29a6cabc5fc6",
+            "created": "2021-09-09T23:20:22.076653Z",
+            "modified": "2021-09-09T23:20:22.076653Z",
+            "product": "TrendMicro",
+            "analysis_engine_version": "11.0.0.1006",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--060050d1-dfe9-400d-b8e9-9dd434f2e3e6",
+            "created": "2021-09-09T23:20:22.076852Z",
+            "modified": "2021-09-09T23:20:22.076852Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--2b8a5006-3dc4-43fe-af73-29a6cabc5fc6",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--cd8a0ed7-a487-46a1-90ca-58e4791bc146",
+            "created": "2021-09-09T23:20:22.077022Z",
+            "modified": "2021-09-09T23:20:22.077022Z",
+            "product": "McAfee-GW-Edition",
+            "analysis_engine_version": "v2019.1.2+3728",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e50491a2-809d-46c5-ba81-da61065e0918",
+            "created": "2021-09-09T23:20:22.077224Z",
+            "modified": "2021-09-09T23:20:22.077224Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--cd8a0ed7-a487-46a1-90ca-58e4791bc146",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--adcf6bbd-340d-4db2-bf6b-dc9961a58cd2",
+            "created": "2021-09-09T23:20:22.077395Z",
+            "modified": "2021-09-09T23:20:22.077395Z",
+            "product": "Trapmine",
+            "analysis_engine_version": "3.5.0.1023",
+            "submitted": "2020-07-27T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--67ee6610-9093-45b7-a556-43d3fcee8a8e",
+            "created": "2021-09-09T23:20:22.077597Z",
+            "modified": "2021-09-09T23:20:22.077597Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--adcf6bbd-340d-4db2-bf6b-dc9961a58cd2",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--099f77df-6ef1-4ad0-a16a-18fd9cb09617",
+            "created": "2021-09-09T23:20:22.077768Z",
+            "modified": "2021-09-09T23:20:22.077768Z",
+            "product": "CMC",
+            "analysis_engine_version": "2.10.2019.1",
+            "submitted": "2021-06-24T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6c4c9a92-e2be-42c5-a6c6-a9aa67a9aa1f",
+            "created": "2021-09-09T23:20:22.077969Z",
+            "modified": "2021-09-09T23:20:22.077969Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--099f77df-6ef1-4ad0-a16a-18fd9cb09617",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--558cee0b-89cd-4829-b6de-69fa141703b1",
+            "created": "2021-09-09T23:20:22.078184Z",
+            "modified": "2021-09-09T23:20:22.078184Z",
+            "product": "Sophos",
+            "analysis_engine_version": "1.3.0.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fbabbdcc-19bc-4236-bd8d-6b6ac26a6048",
+            "created": "2021-09-09T23:20:22.078525Z",
+            "modified": "2021-09-09T23:20:22.078525Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--558cee0b-89cd-4829-b6de-69fa141703b1",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--de52818e-05b3-4fb4-bb1f-bb84dcaf95d9",
+            "created": "2021-09-09T23:20:22.078836Z",
+            "modified": "2021-09-09T23:20:22.078836Z",
+            "product": "Ikarus",
+            "analysis_engine_version": "0.1.5.2",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4e671020-8b43-4ffc-8902-cc11834bc10f",
+            "created": "2021-09-09T23:20:22.079101Z",
+            "modified": "2021-09-09T23:20:22.079101Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--de52818e-05b3-4fb4-bb1f-bb84dcaf95d9",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--1afe800b-b4a9-47cd-aa76-e7d5473bc6bf",
+            "created": "2021-09-09T23:20:22.07928Z",
+            "modified": "2021-09-09T23:20:22.07928Z",
+            "product": "GData",
+            "analysis_engine_version": "A:25.30209B:27.23637",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8fb8ff53-b144-4c5c-a6e9-2407a267f33f",
+            "created": "2021-09-09T23:20:22.079485Z",
+            "modified": "2021-09-09T23:20:22.079485Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--1afe800b-b4a9-47cd-aa76-e7d5473bc6bf",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--e494aad6-4449-433a-9275-6bc5217909cd",
+            "created": "2021-09-09T23:20:22.079658Z",
+            "modified": "2021-09-09T23:20:22.079658Z",
+            "product": "Jiangmin",
+            "analysis_engine_version": "16.0.100",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--794cfeaf-d7f4-4a02-b827-3e36b4c55549",
+            "created": "2021-09-09T23:20:22.079862Z",
+            "modified": "2021-09-09T23:20:22.079862Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--e494aad6-4449-433a-9275-6bc5217909cd",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--8eb9f878-05e9-4cff-ab57-b5cc1e03128f",
+            "created": "2021-09-09T23:20:22.080036Z",
+            "modified": "2021-09-09T23:20:22.080036Z",
+            "product": "Webroot",
+            "analysis_engine_version": "1.0.0.403",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7dc326be-25a9-45a6-987a-92f1587b1e47",
+            "created": "2021-09-09T23:20:22.080267Z",
+            "modified": "2021-09-09T23:20:22.080267Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--8eb9f878-05e9-4cff-ab57-b5cc1e03128f",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--09a6f615-bcc5-4d77-8932-bfee75b8d2a8",
+            "created": "2021-09-09T23:20:22.080503Z",
+            "modified": "2021-09-09T23:20:22.080503Z",
+            "product": "Avira",
+            "analysis_engine_version": "8.3.3.12",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9e83c2ae-56b0-4a37-81f8-1e8f7776616a",
+            "created": "2021-09-09T23:20:22.080817Z",
+            "modified": "2021-09-09T23:20:22.080817Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--09a6f615-bcc5-4d77-8932-bfee75b8d2a8",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--64c7f30d-62e0-4e24-b40c-19cced2df072",
+            "created": "2021-09-09T23:20:22.080996Z",
+            "modified": "2021-09-09T23:20:22.080996Z",
+            "product": "eGambit",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9655e502-c088-46c3-bb15-8f9e70542d5d",
+            "created": "2021-09-09T23:20:22.081201Z",
+            "modified": "2021-09-09T23:20:22.081201Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--64c7f30d-62e0-4e24-b40c-19cced2df072",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--7c5dd1e2-8241-4ae3-a0d4-d2944b98bc49",
+            "created": "2021-09-09T23:20:22.081374Z",
+            "modified": "2021-09-09T23:20:22.081374Z",
+            "product": "MAX",
+            "analysis_engine_version": "2019.9.16.1",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0e593e85-1df9-44c2-af44-cac50cd403c8",
+            "created": "2021-09-09T23:20:22.081578Z",
+            "modified": "2021-09-09T23:20:22.081578Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--7c5dd1e2-8241-4ae3-a0d4-d2944b98bc49",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--d301821e-ec74-48c3-a668-a52265015607",
+            "created": "2021-09-09T23:20:22.081752Z",
+            "modified": "2021-09-09T23:20:22.081752Z",
+            "product": "Antiy-AVL",
+            "analysis_engine_version": "3.0.0.1",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0c326d7f-a4bc-462c-b16b-4364ff2ee0dd",
+            "created": "2021-09-09T23:20:22.081955Z",
+            "modified": "2021-09-09T23:20:22.081955Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--d301821e-ec74-48c3-a668-a52265015607",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--5abd2e81-d876-43eb-a2d1-c35e6bcfe3c2",
+            "created": "2021-09-09T23:20:22.082128Z",
+            "modified": "2021-09-09T23:20:22.082128Z",
+            "product": "Kingsoft",
+            "analysis_engine_version": "2017.9.26.565",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e0ecda82-85f7-4e63-8808-99014b43746f",
+            "created": "2021-09-09T23:20:22.082338Z",
+            "modified": "2021-09-09T23:20:22.082338Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--5abd2e81-d876-43eb-a2d1-c35e6bcfe3c2",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--1337f8dc-4cb6-4859-b967-cb40d58378e0",
+            "created": "2021-09-09T23:20:22.08251Z",
+            "modified": "2021-09-09T23:20:22.08251Z",
+            "product": "Gridinsoft",
+            "analysis_engine_version": "1.0.46.139",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--124c7348-1fe0-464f-bc1d-c53ec58b3799",
+            "created": "2021-09-09T23:20:22.082711Z",
+            "modified": "2021-09-09T23:20:22.082711Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--1337f8dc-4cb6-4859-b967-cb40d58378e0",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--773ac44b-fe57-44ad-8979-99dda6a7796b",
+            "created": "2021-09-09T23:20:22.082896Z",
+            "modified": "2021-09-09T23:20:22.082896Z",
+            "product": "Arcabit",
+            "analysis_engine_version": "1.0.0.886",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bc05d033-cded-4317-99f1-9915b8baafbb",
+            "created": "2021-09-09T23:20:22.083101Z",
+            "modified": "2021-09-09T23:20:22.083101Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--773ac44b-fe57-44ad-8979-99dda6a7796b",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--81f10168-7640-4e7f-a6fe-b139e25201c9",
+            "created": "2021-09-09T23:20:22.083272Z",
+            "modified": "2021-09-09T23:20:22.083272Z",
+            "product": "ViRobot",
+            "analysis_engine_version": "2014.3.20.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bbdf7159-780d-4195-9f6c-c1ba4c890f0b",
+            "created": "2021-09-09T23:20:22.083475Z",
+            "modified": "2021-09-09T23:20:22.083475Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--81f10168-7640-4e7f-a6fe-b139e25201c9",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--b78f7c28-1912-4c58-b490-121f468682e4",
+            "created": "2021-09-09T23:20:22.083647Z",
+            "modified": "2021-09-09T23:20:22.083647Z",
+            "product": "ZoneAlarm",
+            "analysis_engine_version": "1.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--99a51477-1d1e-4c90-a417-5917a52b8f0e",
+            "created": "2021-09-09T23:20:22.084018Z",
+            "modified": "2021-09-09T23:20:22.084018Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--b78f7c28-1912-4c58-b490-121f468682e4",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--c76f8fcc-415b-4572-bedd-fda8c412d3dd",
+            "created": "2021-09-09T23:20:22.084347Z",
+            "modified": "2021-09-09T23:20:22.084347Z",
+            "product": "Avast-Mobile",
+            "analysis_engine_version": "210707-00",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--075b736e-5115-45fa-8b19-e32abc14c7f5",
+            "created": "2021-09-09T23:20:22.084671Z",
+            "modified": "2021-09-09T23:20:22.084671Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--c76f8fcc-415b-4572-bedd-fda8c412d3dd",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--d50b628a-d83b-406f-950a-bad79dc85861",
+            "created": "2021-09-09T23:20:22.084849Z",
+            "modified": "2021-09-09T23:20:22.084849Z",
+            "product": "Microsoft",
+            "analysis_engine_version": "1.1.18300.4",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--106298d2-1108-4864-bceb-54de45c9b26d",
+            "created": "2021-09-09T23:20:22.085053Z",
+            "modified": "2021-09-09T23:20:22.085053Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--d50b628a-d83b-406f-950a-bad79dc85861",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--57201857-6ff4-474f-84e4-afdd32e446f5",
+            "created": "2021-09-09T23:20:22.085225Z",
+            "modified": "2021-09-09T23:20:22.085225Z",
+            "product": "Cynet",
+            "analysis_engine_version": "4.0.0.27",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fbd1ac40-2eeb-4b28-ae05-2c5d2bc1f32b",
+            "created": "2021-09-09T23:20:22.085426Z",
+            "modified": "2021-09-09T23:20:22.085426Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--57201857-6ff4-474f-84e4-afdd32e446f5",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--dbeb0e4f-232b-4839-8115-4968a374312c",
+            "created": "2021-09-09T23:20:22.085598Z",
+            "modified": "2021-09-09T23:20:22.085598Z",
+            "product": "BitDefenderFalx",
+            "analysis_engine_version": "2.0.936",
+            "submitted": "2021-06-10T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5dd03156-4c89-44ef-8922-febb926a670e",
+            "created": "2021-09-09T23:20:22.0858Z",
+            "modified": "2021-09-09T23:20:22.0858Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--dbeb0e4f-232b-4839-8115-4968a374312c",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--cf09f9e4-41c0-4a40-9c64-112a5d0f3011",
+            "created": "2021-09-09T23:20:22.085972Z",
+            "modified": "2021-09-09T23:20:22.085972Z",
+            "product": "AhnLab-V3",
+            "analysis_engine_version": "3.20.3.10145",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--68e306f5-5d61-4c39-b4d1-d6528f034675",
+            "created": "2021-09-09T23:20:22.086175Z",
+            "modified": "2021-09-09T23:20:22.086175Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--cf09f9e4-41c0-4a40-9c64-112a5d0f3011",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--aecc2758-1431-472a-b958-834b3f9668c9",
+            "created": "2021-09-09T23:20:22.086347Z",
+            "modified": "2021-09-09T23:20:22.086347Z",
+            "product": "Acronis",
+            "analysis_engine_version": "1.1.1.82",
+            "submitted": "2021-05-12T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5a6c4e86-d285-4e3d-864b-cb7b996d80fd",
+            "created": "2021-09-09T23:20:22.086548Z",
+            "modified": "2021-09-09T23:20:22.086548Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--aecc2758-1431-472a-b958-834b3f9668c9",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--243aba8f-c57c-493d-8afa-fdcf1d61d967",
+            "created": "2021-09-09T23:20:22.086717Z",
+            "modified": "2021-09-09T23:20:22.086717Z",
+            "product": "VBA32",
+            "analysis_engine_version": "5.0.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--836ee3e1-7cfa-47c9-b0ac-b07f116ef5d5",
+            "created": "2021-09-09T23:20:22.086939Z",
+            "modified": "2021-09-09T23:20:22.086939Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--243aba8f-c57c-493d-8afa-fdcf1d61d967",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--748bafde-140f-48d9-bd69-de578a129ec4",
+            "created": "2021-09-09T23:20:22.087112Z",
+            "modified": "2021-09-09T23:20:22.087112Z",
+            "product": "TACHYON",
+            "analysis_engine_version": "2021-07-08.01",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--cccad29d-4ce6-46ec-ad82-094318dfd6f0",
+            "created": "2021-09-09T23:20:22.087316Z",
+            "modified": "2021-09-09T23:20:22.087316Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--748bafde-140f-48d9-bd69-de578a129ec4",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--b9ac24ab-542c-4647-bfc5-4687edb2449a",
+            "created": "2021-09-09T23:20:22.087486Z",
+            "modified": "2021-09-09T23:20:22.087486Z",
+            "product": "Cylance",
+            "analysis_engine_version": "2.3.1.101",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6b7cd197-42d3-4218-a061-306b6628cde9",
+            "created": "2021-09-09T23:20:22.087708Z",
+            "modified": "2021-09-09T23:20:22.087708Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--b9ac24ab-542c-4647-bfc5-4687edb2449a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2c262cb9-08ec-48a8-b594-5088da5bbe39",
+            "created": "2021-09-09T23:20:22.087913Z",
+            "modified": "2021-09-09T23:20:22.087913Z",
+            "product": "Zoner",
+            "analysis_engine_version": "0.0.0.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5246db0b-35b6-420e-918a-1000e28650d6",
+            "created": "2021-09-09T23:20:22.088306Z",
+            "modified": "2021-09-09T23:20:22.088306Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--2c262cb9-08ec-48a8-b594-5088da5bbe39",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--a18b4ceb-00ea-4ce0-b5f0-ab8d85b5e67d",
+            "created": "2021-09-09T23:20:22.088761Z",
+            "modified": "2021-09-09T23:20:22.088761Z",
+            "product": "TrendMicro-HouseCall",
+            "analysis_engine_version": "10.0.0.1040",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c61efb48-f8f4-44f8-ab5d-7338774ace0d",
+            "created": "2021-09-09T23:20:22.088992Z",
+            "modified": "2021-09-09T23:20:22.088992Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--a18b4ceb-00ea-4ce0-b5f0-ab8d85b5e67d",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--bf32adf8-7494-4c8f-8284-5f89911c497a",
+            "created": "2021-09-09T23:20:22.089178Z",
+            "modified": "2021-09-09T23:20:22.089178Z",
+            "product": "Rising",
+            "analysis_engine_version": "25.0.0.26",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4630e8a5-a8bd-450c-97d3-130154a61499",
+            "created": "2021-09-09T23:20:22.089518Z",
+            "modified": "2021-09-09T23:20:22.089518Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--bf32adf8-7494-4c8f-8284-5f89911c497a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--dec83deb-12cc-4057-90b1-08dcfc342f2d",
+            "created": "2021-09-09T23:20:22.089795Z",
+            "modified": "2021-09-09T23:20:22.089795Z",
+            "product": "Yandex",
+            "analysis_engine_version": "5.5.2.24",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "unknown"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--986e9f46-f313-46bb-b27a-09b752e84d23",
+            "created": "2021-09-09T23:20:22.090121Z",
+            "modified": "2021-09-09T23:20:22.090121Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--dec83deb-12cc-4057-90b1-08dcfc342f2d",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--41997718-94f9-4baf-bc61-0ecb8c225d42",
+            "created": "2021-09-09T23:20:22.090394Z",
+            "modified": "2021-09-09T23:20:22.090394Z",
+            "product": "SentinelOne",
+            "analysis_engine_version": "5.2.0.9",
+            "submitted": "2021-07-03T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--879bc66b-fd2f-452c-a08b-475375ef94dc",
+            "created": "2021-09-09T23:20:22.090731Z",
+            "modified": "2021-09-09T23:20:22.090731Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--41997718-94f9-4baf-bc61-0ecb8c225d42",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--015be6c8-ec0d-49e6-805e-691165d0ec85",
+            "created": "2021-09-09T23:20:22.091022Z",
+            "modified": "2021-09-09T23:20:22.091022Z",
+            "product": "MaxSecure",
+            "analysis_engine_version": "1.0.0.1",
+            "submitted": "2021-07-06T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--be86a3ef-dee2-46ce-8b46-606fa9846db7",
+            "created": "2021-09-09T23:20:22.091359Z",
+            "modified": "2021-09-09T23:20:22.091359Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--015be6c8-ec0d-49e6-805e-691165d0ec85",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--a9f4b6d5-e17d-4cef-ad4a-1c5fd084fa16",
+            "created": "2021-09-09T23:20:22.091635Z",
+            "modified": "2021-09-09T23:20:22.091635Z",
+            "product": "Fortinet",
+            "analysis_engine_version": "6.2.142.0",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c2f852cc-f60b-4dc1-b028-7231d632e859",
+            "created": "2021-09-09T23:20:22.091997Z",
+            "modified": "2021-09-09T23:20:22.091997Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--a9f4b6d5-e17d-4cef-ad4a-1c5fd084fa16",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--fc899f17-3c4f-405f-86b8-ffbc9e4da01a",
+            "created": "2021-09-09T23:20:22.092275Z",
+            "modified": "2021-09-09T23:20:22.092275Z",
+            "product": "AVG",
+            "analysis_engine_version": "21.1.5827.0",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3dd103a7-5682-45b2-af0f-b6d2062a5300",
+            "created": "2021-09-09T23:20:22.09261Z",
+            "modified": "2021-09-09T23:20:22.09261Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--fc899f17-3c4f-405f-86b8-ffbc9e4da01a",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--390fadde-4df4-4c47-b080-0bcc0be89899",
+            "created": "2021-09-09T23:20:22.092884Z",
+            "modified": "2021-09-09T23:20:22.092884Z",
+            "product": "Panda",
+            "analysis_engine_version": "4.6.4.2",
+            "submitted": "2021-07-07T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--395dfc29-3be6-40c6-a692-daa770c57292",
+            "created": "2021-09-09T23:20:22.09322Z",
+            "modified": "2021-09-09T23:20:22.09322Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--390fadde-4df4-4c47-b080-0bcc0be89899",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--f82aedf4-db07-48a6-9eae-669c68001992",
+            "created": "2021-09-09T23:20:22.093469Z",
+            "modified": "2021-09-09T23:20:22.093469Z",
+            "product": "CrowdStrike",
+            "analysis_engine_version": "1.0",
+            "submitted": "2021-02-03T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--081627a8-556b-4a5a-9142-576b9f1a4d42",
+            "created": "2021-09-09T23:20:22.093692Z",
+            "modified": "2021-09-09T23:20:22.093692Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--f82aedf4-db07-48a6-9eae-669c68001992",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--1ade1223-ff60-4e4f-bd10-4ed1074d71e0",
+            "created": "2021-09-09T23:20:22.093875Z",
+            "modified": "2021-09-09T23:20:22.093875Z",
+            "product": "Qihoo-360",
+            "analysis_engine_version": "1.0.0.1300",
+            "submitted": "2021-07-08T00:00:00Z",
+            "result": "malicious"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3cadd875-c2cd-4a11-8ff9-8e2917c51715",
+            "created": "2021-09-09T23:20:22.094087Z",
+            "modified": "2021-09-09T23:20:22.094087Z",
+            "relationship_type": "av-analysis-of",
+            "source_ref": "malware-analysis--1ade1223-ff60-4e4f-bd10-4ed1074d71e0",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--365d99a1-fa60-5efd-a2a9-7f4ec0d0c7fe",
+            "value": "176.103.62.217"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4e91372a-417c-44d0-9d1c-b8ece8f245be",
+            "created": "2021-09-09T23:20:23.565243Z",
+            "modified": "2021-09-09T23:20:23.565243Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--365d99a1-fa60-5efd-a2a9-7f4ec0d0c7fe",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--b9347d8f-f695-5d13-b7a8-b201932541de",
+            "value": "92.123.77.41"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--82df5596-84bd-41c0-9a0d-dfce79b26cce",
+            "created": "2021-09-09T23:20:23.565786Z",
+            "modified": "2021-09-09T23:20:23.565786Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--b9347d8f-f695-5d13-b7a8-b201932541de",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--fcd0f48a-294d-5c08-b461-513807097d79",
+            "value": "92.123.77.65"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3210f0e3-68ce-4bc1-9594-0aa34d6caa3a",
+            "created": "2021-09-09T23:20:23.566289Z",
+            "modified": "2021-09-09T23:20:23.566289Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--fcd0f48a-294d-5c08-b461-513807097d79",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--bb14de01-25f5-5627-976f-38fab457263d",
+            "value": "92.123.77.40"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d14a2af8-cca9-43c5-9197-dffbb350e4c1",
+            "created": "2021-09-09T23:20:23.566802Z",
+            "modified": "2021-09-09T23:20:23.566802Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--bb14de01-25f5-5627-976f-38fab457263d",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--899ed887-c351-55aa-a748-c7fc1c3d8cbc",
+            "value": "92.123.77.50"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9e304996-d4d5-470a-a4d4-81d42b0a8d11",
+            "created": "2021-09-09T23:20:23.5673Z",
+            "modified": "2021-09-09T23:20:23.5673Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--899ed887-c351-55aa-a748-c7fc1c3d8cbc",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--183415d9-4bbd-5e1c-91ee-dd6a06a17098",
+            "value": "23.52.0.177"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5bab8b78-2b46-4e2b-adb8-7cabaa2d3ae6",
+            "created": "2021-09-09T23:20:23.567797Z",
+            "modified": "2021-09-09T23:20:23.567797Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--183415d9-4bbd-5e1c-91ee-dd6a06a17098",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--3bbabd0a-6574-5be9-a2e5-b60778d495cf",
+            "value": "23.52.0.176"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ea61685b-13b6-4ea3-9e82-a669e3730174",
+            "created": "2021-09-09T23:20:23.568295Z",
+            "modified": "2021-09-09T23:20:23.568295Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--3bbabd0a-6574-5be9-a2e5-b60778d495cf",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--3096cd08-5153-5837-b7b5-7b1b92d01130",
+            "value": "23.52.0.184"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--74f4b974-d073-4bea-ba89-e34dcdbc36a9",
+            "created": "2021-09-09T23:20:23.568791Z",
+            "modified": "2021-09-09T23:20:23.568791Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--3096cd08-5153-5837-b7b5-7b1b92d01130",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--eb70c8f0-5123-5b94-95a5-bc5a2a9ffa9f",
+            "value": "23.52.0.146"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b9f1e869-0c7f-4d8f-98c0-9b787fc0c0a5",
+            "created": "2021-09-09T23:20:23.569285Z",
+            "modified": "2021-09-09T23:20:23.569285Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--eb70c8f0-5123-5b94-95a5-bc5a2a9ffa9f",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "ipv4-addr",
+            "spec_version": "2.1",
+            "id": "ipv4-addr--683ac71f-4a06-56f9-9609-3a3d0b5e4501",
+            "value": "23.52.0.155"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8586be7a-83b2-47f7-ac59-9fd19d64989a",
+            "created": "2021-09-09T23:20:23.569781Z",
+            "modified": "2021-09-09T23:20:23.569781Z",
+            "relationship_type": "related-to",
+            "source_ref": "ipv4-addr--683ac71f-4a06-56f9-9609-3a3d0b5e4501",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--49bb4d0f-83fa-4df5-96fe-0a38ab20b685",
+            "created": "2021-09-09T23:20:23.570059Z",
+            "modified": "2021-09-09T23:20:23.570059Z",
+            "name": "IPv4 Addresses",
+            "pattern": "[ ipv4-addr:value = '176.103.62.217' OR ipv4-addr:value = '92.123.77.41' OR ipv4-addr:value = '92.123.77.65' OR ipv4-addr:value = '92.123.77.40' OR ipv4-addr:value = '92.123.77.50' OR ipv4-addr:value = '23.52.0.177' OR ipv4-addr:value = '23.52.0.176' OR ipv4-addr:value = '23.52.0.184' OR ipv4-addr:value = '23.52.0.146' OR ipv4-addr:value = '23.52.0.155' ]",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2021-09-09T23:20:23.570059Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e3033438-d8b1-4817-8d84-41c8878f7ddb",
+            "created": "2021-09-09T23:20:23.57768Z",
+            "modified": "2021-09-09T23:20:23.57768Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--49bb4d0f-83fa-4df5-96fe-0a38ab20b685",
+            "target_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--51476834-cf39-5554-ba51-5e4234baaced",
+            "value": "dns1.registrar-servers.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--74da4666-8a08-4c4b-8937-679655fbb989",
+            "created": "2021-09-09T23:20:24.361435Z",
+            "modified": "2021-09-09T23:20:24.361435Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--51476834-cf39-5554-ba51-5e4234baaced"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--4dbb83c1-6d50-5650-b2d7-7828f998bac0",
+            "value": "99.83.154.118"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a3128c14-6338-4125-81b4-30b3c5d5a9a8",
+            "created": "2021-09-09T23:20:24.361963Z",
+            "modified": "2021-09-09T23:20:24.361963Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--4dbb83c1-6d50-5650-b2d7-7828f998bac0"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--49a418df-af09-5014-bf78-559258cb35be",
+            "value": "dns102.registrar-servers.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f862c246-c882-424f-80b5-70a013417f62",
+            "created": "2021-09-09T23:20:24.362459Z",
+            "modified": "2021-09-09T23:20:24.362459Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--49a418df-af09-5014-bf78-559258cb35be"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--af05111b-4990-5c8c-b9c3-cd4e025b6a2e",
+            "value": "dns101.registrar-servers.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fd050265-fa3b-43d8-895d-7b1d2124047a",
+            "created": "2021-09-09T23:20:24.362964Z",
+            "modified": "2021-09-09T23:20:24.362964Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--af05111b-4990-5c8c-b9c3-cd4e025b6a2e"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--9278a58e-aac9-5baa-bb3a-3a2ee9c5072a",
+            "value": "dns2.registrar-servers.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4688ec81-f208-4344-b6b0-5c25b156efeb",
+            "created": "2021-09-09T23:20:24.36346Z",
+            "modified": "2021-09-09T23:20:24.36346Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--9278a58e-aac9-5baa-bb3a-3a2ee9c5072a"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--633978bb-35e0-59f2-8a68-3bd500c096de",
+            "value": "23.54.21.43"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--34d2c0d9-1c21-4b0b-a8b4-713abdb27984",
+            "created": "2021-09-09T23:20:24.363953Z",
+            "modified": "2021-09-09T23:20:24.363953Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--633978bb-35e0-59f2-8a68-3bd500c096de"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--ac85463b-a295-521c-95c7-96329f4aafb8",
+            "value": "o.lencr.edgesuite.net"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--78369a5e-d6fc-4d2d-99ea-773823492998",
+            "created": "2021-09-09T23:20:24.364444Z",
+            "modified": "2021-09-09T23:20:24.364444Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--ac85463b-a295-521c-95c7-96329f4aafb8"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--5e42a0a4-968c-52a3-a866-473a65aea2e6",
+            "value": "23.54.21.49"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e4db4658-5ece-4023-b7b7-cff738c26f51",
+            "created": "2021-09-09T23:20:24.364939Z",
+            "modified": "2021-09-09T23:20:24.364939Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--5e42a0a4-968c-52a3-a866-473a65aea2e6"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--fc08d3cb-637e-5313-a367-e1b25ba5418b",
+            "value": "a1887.dscq.akamai.net"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--79987639-e982-48c6-9c33-047f8364bce6",
+            "created": "2021-09-09T23:20:24.365431Z",
+            "modified": "2021-09-09T23:20:24.365431Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--fc08d3cb-637e-5313-a367-e1b25ba5418b"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--738c745a-a8b1-5905-b9d2-c0079348707a",
+            "value": "a1952.dscq.akamai.net"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d9bc5cc3-aae0-40b6-a275-a2350e34669f",
+            "created": "2021-09-09T23:20:24.365926Z",
+            "modified": "2021-09-09T23:20:24.365926Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--738c745a-a8b1-5905-b9d2-c0079348707a"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--6b13949f-6906-5e6d-ab19-608fe2f3b473",
+            "value": "23.218.80.162"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f8a83a44-5542-44bb-9a51-e8d3cdd6f2a3",
+            "created": "2021-09-09T23:20:24.366417Z",
+            "modified": "2021-09-09T23:20:24.366417Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--6b13949f-6906-5e6d-ab19-608fe2f3b473"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--2c4fb17c-6aac-551c-9dcd-c4a8b9555080",
+            "value": "identrust.edgesuite.net"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--57450d1c-65db-40fa-af59-6c531c5ca966",
+            "created": "2021-09-09T23:20:24.366934Z",
+            "modified": "2021-09-09T23:20:24.366934Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--2c4fb17c-6aac-551c-9dcd-c4a8b9555080"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--3d69f92e-5068-5704-bf5c-68569f8d8840",
+            "value": "23.218.80.160"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b2198ddf-ef12-4b38-91ce-3fc205a91e79",
+            "created": "2021-09-09T23:20:24.368111Z",
+            "modified": "2021-09-09T23:20:24.368111Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--3d69f92e-5068-5704-bf5c-68569f8d8840"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--b9adecb2-de64-5577-87d8-0349ab65d90c",
+            "value": "ns2.above.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a8e21a89-1f0f-4472-81d6-50d846ce21fe",
+            "created": "2021-09-09T23:20:24.368616Z",
+            "modified": "2021-09-09T23:20:24.368616Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--b9adecb2-de64-5577-87d8-0349ab65d90c"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--936aba91-9940-5ffe-87e9-b8e829c4e25f",
+            "value": "ns1.above.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b84e38e3-8914-4bef-bdaa-55b7e11aee98",
+            "created": "2021-09-09T23:20:24.369109Z",
+            "modified": "2021-09-09T23:20:24.369109Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--936aba91-9940-5ffe-87e9-b8e829c4e25f"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--91fba050-9ecf-5c75-9bf4-d3e62195db01",
+            "value": "103.224.212.220"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--56e3faac-deec-4761-bab0-810d5058837d",
+            "created": "2021-09-09T23:20:24.369603Z",
+            "modified": "2021-09-09T23:20:24.369603Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--91fba050-9ecf-5c75-9bf4-d3e62195db01"
+        },
+        {
+            "type": "domain-name",
+            "spec_version": "2.1",
+            "id": "domain-name--996aac32-c0f8-5715-8a15-47950422305f",
+            "value": "park-mx.above.com"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c2a346d2-18ef-460b-afa9-44d40ab6e264",
+            "created": "2021-09-09T23:20:24.370093Z",
+            "modified": "2021-09-09T23:20:24.370093Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "domain-name--996aac32-c0f8-5715-8a15-47950422305f"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--874a6b75-15c3-49a5-9c79-fe6da038ae8e",
+            "created": "2021-09-09T23:20:25.950743Z",
+            "modified": "2021-09-09T23:20:25.950743Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware--d004a1ee-1a88-4afa-8435-8ebee9ef5ae9",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3d0df742-4270-42ad-903a-f68040b2af7c",
+            "created": "2021-09-09T23:20:25.951164Z",
+            "modified": "2021-09-09T23:20:25.951164Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--320a411a-c3e6-4c81-8dec-45f84e9cb113",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--12f4e3d2-8885-4983-8bc2-038c58cbc2b1",
+            "created": "2021-09-09T23:20:25.951461Z",
+            "modified": "2021-09-09T23:20:25.951461Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--b52976a8-7146-4345-843a-9ae0f9a2b93f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--cdac6484-9126-4be6-84ae-42012b3f7b62",
+            "created": "2021-09-09T23:20:25.95175Z",
+            "modified": "2021-09-09T23:20:25.95175Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--99d64f31-492f-4ab0-b93f-b415f912d99d",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--17c6ea87-ee8d-40b8-812e-585da565daca",
+            "created": "2021-09-09T23:20:25.952042Z",
+            "modified": "2021-09-09T23:20:25.952042Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--8eaf6838-5974-487f-9707-db89e90d68df",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--faf55b9e-5d12-4b49-98be-5d5e911ed81f",
+            "created": "2021-09-09T23:20:25.95233Z",
+            "modified": "2021-09-09T23:20:25.95233Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--f70356ab-8cab-4092-a991-8450057ccf4a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--83c49731-57b4-4d18-a7f0-fda44f902427",
+            "created": "2021-09-09T23:20:25.952616Z",
+            "modified": "2021-09-09T23:20:25.952616Z",
+            "relationship_type": "derived-from",
+            "source_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7f0f72bd-7539-4ecf-aecf-bae9ea2a4101",
+            "created": "2021-09-09T23:20:25.952903Z",
+            "modified": "2021-09-09T23:20:25.952903Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--a620ce9f-1f74-4a10-b9d6-6d735196fe2f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8438b79e-cea2-496a-83a4-95ae0f26c4d5",
+            "created": "2021-09-09T23:20:25.953191Z",
+            "modified": "2021-09-09T23:20:25.953191Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--43681735-1fbf-4fa2-8fe8-f1bed38f8c6f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6d4dd891-2e39-42e3-bf04-af265fd57552",
+            "created": "2021-09-09T23:20:25.953478Z",
+            "modified": "2021-09-09T23:20:25.953478Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--767d97ce-7ddb-4ae7-af77-c819741615a3",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0952b3b0-1c6e-4c2d-b5ce-74f0cf2ab161",
+            "created": "2021-09-09T23:20:25.953765Z",
+            "modified": "2021-09-09T23:20:25.953765Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--c1f37216-5a94-4e07-98cd-70c918edc127",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6009a778-58dd-428a-9475-ae7000dc5d09",
+            "created": "2021-09-09T23:20:25.954048Z",
+            "modified": "2021-09-09T23:20:25.954048Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--33d8d9a5-0968-4ffe-94c1-90eb2dd8161d",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--af4c930c-1999-44f8-aa70-e1715358e4b5",
+            "created": "2021-09-09T23:20:25.954333Z",
+            "modified": "2021-09-09T23:20:25.954333Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--90c1c360-d837-493d-afed-a979592fd403",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--66258758-5361-46dc-b7e8-32d2b7a529e3",
+            "created": "2021-09-09T23:20:25.954617Z",
+            "modified": "2021-09-09T23:20:25.954617Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--2fd72daf-4621-47f0-9801-58ebb8e1404a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--88a004cf-0d47-4e44-9d7d-37ed703f5dfb",
+            "created": "2021-09-09T23:20:25.954933Z",
+            "modified": "2021-09-09T23:20:25.954933Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--ce4a2d1c-d257-4f6a-b06d-aa653153dcf4",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--49d44da9-bb59-4f1b-b5e3-37bd7122eeda",
+            "created": "2021-09-09T23:20:25.95522Z",
+            "modified": "2021-09-09T23:20:25.95522Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--ba6d8349-fb07-49a1-befb-b2922b48e80c",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8cb4bbde-6763-48a7-92b0-a7a1bfd2204f",
+            "created": "2021-09-09T23:20:25.955508Z",
+            "modified": "2021-09-09T23:20:25.955508Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--503dd406-3e22-401e-951f-cf8efd73a9f2",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e9eeb2ef-74b6-4c68-bc5d-ed37ccfef054",
+            "created": "2021-09-09T23:20:25.955792Z",
+            "modified": "2021-09-09T23:20:25.955792Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--4e802449-104d-4102-9301-5c849b565587",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f34b90cc-2e49-447c-a294-6c65c6a7911d",
+            "created": "2021-09-09T23:20:25.956079Z",
+            "modified": "2021-09-09T23:20:25.956079Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--58b7c040-4f00-413a-ace8-bdc24ada4ae0",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7dc56383-7dfb-4205-b059-338a03517aea",
+            "created": "2021-09-09T23:20:25.956364Z",
+            "modified": "2021-09-09T23:20:25.956364Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--f0d7c956-eb66-4741-b49c-21aab4ba5dd3",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a0cdc96a-a857-4f93-ba35-9d977a16f8b6",
+            "created": "2021-09-09T23:20:25.95665Z",
+            "modified": "2021-09-09T23:20:25.95665Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--83b14e83-0589-4dd6-a1eb-a901a1919b43",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--27658bdb-7413-4166-94dc-b07b575aaabb",
+            "created": "2021-09-09T23:20:25.956935Z",
+            "modified": "2021-09-09T23:20:25.956935Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--3705c52d-a897-4bac-8ab9-6a230c9662dc",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--409a0631-cc9e-4725-8920-e71c1f3dc97a",
+            "created": "2021-09-09T23:20:25.957219Z",
+            "modified": "2021-09-09T23:20:25.957219Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--e3d3c88d-78a2-4013-a1ae-4252424ae985",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0f07b9d6-3945-42d0-add3-f0ac10907fa3",
+            "created": "2021-09-09T23:20:25.957507Z",
+            "modified": "2021-09-09T23:20:25.957507Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--2e084f11-024b-4173-9acd-8b8f2e7bcff0",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--da940a2c-c979-455c-bec1-d535daf8cee0",
+            "created": "2021-09-09T23:20:25.957797Z",
+            "modified": "2021-09-09T23:20:25.957797Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--46d2e805-fc45-4d2d-b5c6-d6d5d9e0cffd",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1afa980b-cdd6-4ad1-beae-3b92d39a9132",
+            "created": "2021-09-09T23:20:25.958085Z",
+            "modified": "2021-09-09T23:20:25.958085Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--0af7c3cb-8b39-4f17-9f36-030a473dcb83",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1b4a87db-809f-4c36-bc2a-0bc216203615",
+            "created": "2021-09-09T23:20:25.958372Z",
+            "modified": "2021-09-09T23:20:25.958372Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--a9c3336b-4c6f-4c96-9f54-e111dfbfeb8b",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--57de5258-a69c-4ca6-ab54-41e95831a376",
+            "created": "2021-09-09T23:20:25.958658Z",
+            "modified": "2021-09-09T23:20:25.958658Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--99d255cb-dd21-43d5-a086-688b094d59ef",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ac9a1ebb-ddc8-4404-82e7-a6408b923ee9",
+            "created": "2021-09-09T23:20:25.958959Z",
+            "modified": "2021-09-09T23:20:25.958959Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--5863335b-da4b-4586-b13b-6ce889805eba",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e3023c7f-92d4-4723-90d5-07abba88dc6a",
+            "created": "2021-09-09T23:20:25.959247Z",
+            "modified": "2021-09-09T23:20:25.959247Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--b784bef9-b791-453b-ba57-d431be171002",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c0e1788d-f8a5-4e61-9aad-b09d3ef3ee8a",
+            "created": "2021-09-09T23:20:25.959534Z",
+            "modified": "2021-09-09T23:20:25.959534Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--f4ad6f39-b64e-4d2d-9e80-7f13ea7e6299",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fe1ffba2-7bfe-4f74-9390-a63926ce1472",
+            "created": "2021-09-09T23:20:25.959818Z",
+            "modified": "2021-09-09T23:20:25.959818Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--74f966a0-e2cd-4809-94ab-358e0b2eee17",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4c4fd8b0-f243-4345-98c5-83a8f63d37a8",
+            "created": "2021-09-09T23:20:25.9601Z",
+            "modified": "2021-09-09T23:20:25.9601Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--75bfd9f6-1be2-49d9-973f-67c14facd98a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c4fe4cbe-33c5-4b86-8e99-beae93a1ae33",
+            "created": "2021-09-09T23:20:25.960383Z",
+            "modified": "2021-09-09T23:20:25.960383Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--1d0a1375-309a-49dc-b875-502eb18ac566",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2681e0fe-964f-4f8d-bb9e-ca26ee4c9585",
+            "created": "2021-09-09T23:20:25.960666Z",
+            "modified": "2021-09-09T23:20:25.960666Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--3ca16fee-6829-44a2-8e9e-f28f56dde5a9",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8e90a849-67d2-47ef-89c4-356939ae4ff0",
+            "created": "2021-09-09T23:20:25.960951Z",
+            "modified": "2021-09-09T23:20:25.960951Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--81ab43b1-1369-483e-8ce6-32db0909d4dc",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fe77626a-17bd-4766-a480-d5500be73ca2",
+            "created": "2021-09-09T23:20:25.961236Z",
+            "modified": "2021-09-09T23:20:25.961236Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--51a53d98-50cc-410b-a84d-91c9d3325f40",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--88b7244f-4c8f-463b-ba6a-1570391bccd2",
+            "created": "2021-09-09T23:20:25.961519Z",
+            "modified": "2021-09-09T23:20:25.961519Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--0e496727-16bf-415c-bf1b-9ebbc6c8dcf2",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0f563e28-69e7-472a-99c6-a55dcd81c0c3",
+            "created": "2021-09-09T23:20:25.961801Z",
+            "modified": "2021-09-09T23:20:25.961801Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--4ecb20b2-1b53-4741-8ce2-008fb9c4bbe8",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c02fe865-7f97-4c7f-bfdd-217d84da7f69",
+            "created": "2021-09-09T23:20:25.962085Z",
+            "modified": "2021-09-09T23:20:25.962085Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--ce0a4a5b-921a-4dd5-a6d4-5af5267bfc27",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5d62e57b-180f-43f7-96de-33f3c3b88b0c",
+            "created": "2021-09-09T23:20:25.962369Z",
+            "modified": "2021-09-09T23:20:25.962369Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--0c5a66fd-6655-4f3a-9c10-6b476810c0bd",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a1382458-ffe9-45aa-ab79-00f8733d7e2a",
+            "created": "2021-09-09T23:20:25.962654Z",
+            "modified": "2021-09-09T23:20:25.962654Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--65fa5197-b36d-4ec0-894a-de6bfd9d4bce",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e3ec05b1-4db5-4833-a9e3-f9ac59940ae2",
+            "created": "2021-09-09T23:20:25.962953Z",
+            "modified": "2021-09-09T23:20:25.962953Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--62ee1f2e-28c2-4606-b380-d23dc6d6bc31",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2a5122cf-3a70-4542-93b0-db9f22c9925c",
+            "created": "2021-09-09T23:20:25.963237Z",
+            "modified": "2021-09-09T23:20:25.963237Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--2eb7304c-f13e-49fc-b568-fca00d7b6adb",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fb34a5fc-1ef2-4aec-901a-4a4c146d5eef",
+            "created": "2021-09-09T23:20:25.963519Z",
+            "modified": "2021-09-09T23:20:25.963519Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--2b8a5006-3dc4-43fe-af73-29a6cabc5fc6",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ba6038db-ad95-453d-a707-e0f31cae3929",
+            "created": "2021-09-09T23:20:25.963802Z",
+            "modified": "2021-09-09T23:20:25.963802Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--cd8a0ed7-a487-46a1-90ca-58e4791bc146",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--dd989b2f-ec26-4735-859d-73bc5777f7ab",
+            "created": "2021-09-09T23:20:25.964093Z",
+            "modified": "2021-09-09T23:20:25.964093Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--adcf6bbd-340d-4db2-bf6b-dc9961a58cd2",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bb163779-6fac-4c76-be16-fde04a2e7a7e",
+            "created": "2021-09-09T23:20:25.964378Z",
+            "modified": "2021-09-09T23:20:25.964378Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--099f77df-6ef1-4ad0-a16a-18fd9cb09617",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b69121d9-3872-4aba-bab7-f128069e7773",
+            "created": "2021-09-09T23:20:25.964663Z",
+            "modified": "2021-09-09T23:20:25.964663Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--558cee0b-89cd-4829-b6de-69fa141703b1",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--463a330d-5bff-400d-8dbc-bef7a4bb5ee7",
+            "created": "2021-09-09T23:20:25.964947Z",
+            "modified": "2021-09-09T23:20:25.964947Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--de52818e-05b3-4fb4-bb1f-bb84dcaf95d9",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f25ca8ab-398b-4a0c-93ff-3ce2aea832b8",
+            "created": "2021-09-09T23:20:25.96523Z",
+            "modified": "2021-09-09T23:20:25.96523Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--1afe800b-b4a9-47cd-aa76-e7d5473bc6bf",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f541f2b5-5bba-4e74-bc99-67fd1fa4e950",
+            "created": "2021-09-09T23:20:25.965518Z",
+            "modified": "2021-09-09T23:20:25.965518Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--e494aad6-4449-433a-9275-6bc5217909cd",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--39e85521-49e6-4af3-ba79-b90220cbb2ed",
+            "created": "2021-09-09T23:20:25.965807Z",
+            "modified": "2021-09-09T23:20:25.965807Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--8eb9f878-05e9-4cff-ab57-b5cc1e03128f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2e8769c2-4caa-4927-b769-de5d18b02e37",
+            "created": "2021-09-09T23:20:25.966093Z",
+            "modified": "2021-09-09T23:20:25.966093Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--09a6f615-bcc5-4d77-8932-bfee75b8d2a8",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5e84e3e4-7e9f-4159-a4b6-4db39d12c1d1",
+            "created": "2021-09-09T23:20:25.966377Z",
+            "modified": "2021-09-09T23:20:25.966377Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--64c7f30d-62e0-4e24-b40c-19cced2df072",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5ab684d7-3fb8-4213-87dd-2a361db55dca",
+            "created": "2021-09-09T23:20:25.966659Z",
+            "modified": "2021-09-09T23:20:25.966659Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--7c5dd1e2-8241-4ae3-a0d4-d2944b98bc49",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d0120c70-1c32-4c4f-a929-e2e56ad973db",
+            "created": "2021-09-09T23:20:25.966983Z",
+            "modified": "2021-09-09T23:20:25.966983Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--d301821e-ec74-48c3-a668-a52265015607",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--590b6864-0a93-4ad6-962f-383086355429",
+            "created": "2021-09-09T23:20:25.96727Z",
+            "modified": "2021-09-09T23:20:25.96727Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--5abd2e81-d876-43eb-a2d1-c35e6bcfe3c2",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--aa455092-c767-4e4e-b605-3d0ea85140b6",
+            "created": "2021-09-09T23:20:25.967555Z",
+            "modified": "2021-09-09T23:20:25.967555Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--1337f8dc-4cb6-4859-b967-cb40d58378e0",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3ce83c75-095b-4362-bf3b-015397b32adc",
+            "created": "2021-09-09T23:20:25.967837Z",
+            "modified": "2021-09-09T23:20:25.967837Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--773ac44b-fe57-44ad-8979-99dda6a7796b",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--07d8713b-2c94-4fb3-ad3c-f5c34e21c75a",
+            "created": "2021-09-09T23:20:25.96812Z",
+            "modified": "2021-09-09T23:20:25.96812Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--81f10168-7640-4e7f-a6fe-b139e25201c9",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--139c1389-3cae-4e8a-a118-bdcaf7e0c894",
+            "created": "2021-09-09T23:20:25.968404Z",
+            "modified": "2021-09-09T23:20:25.968404Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--b78f7c28-1912-4c58-b490-121f468682e4",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7ef5dbb1-afa1-4ebe-aa53-27e5df543f66",
+            "created": "2021-09-09T23:20:25.968688Z",
+            "modified": "2021-09-09T23:20:25.968688Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--c76f8fcc-415b-4572-bedd-fda8c412d3dd",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b6154683-a0f7-4e5a-9038-58a57c85b81e",
+            "created": "2021-09-09T23:20:25.968978Z",
+            "modified": "2021-09-09T23:20:25.968978Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--d50b628a-d83b-406f-950a-bad79dc85861",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--13652e4d-00b2-4abf-999b-e125f4f2f3ab",
+            "created": "2021-09-09T23:20:25.969264Z",
+            "modified": "2021-09-09T23:20:25.969264Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--57201857-6ff4-474f-84e4-afdd32e446f5",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--579465cd-9b20-462e-bb01-7757e113f042",
+            "created": "2021-09-09T23:20:25.969549Z",
+            "modified": "2021-09-09T23:20:25.969549Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--dbeb0e4f-232b-4839-8115-4968a374312c",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e4cb4d44-bb01-49ae-a6d0-19886446963c",
+            "created": "2021-09-09T23:20:25.969833Z",
+            "modified": "2021-09-09T23:20:25.969833Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--cf09f9e4-41c0-4a40-9c64-112a5d0f3011",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a974761d-a993-497f-92cc-d4f2ef15ff58",
+            "created": "2021-09-09T23:20:25.970115Z",
+            "modified": "2021-09-09T23:20:25.970115Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--aecc2758-1431-472a-b958-834b3f9668c9",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b92cb528-1aef-4f69-a247-2319bda9aa34",
+            "created": "2021-09-09T23:20:25.9704Z",
+            "modified": "2021-09-09T23:20:25.9704Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--243aba8f-c57c-493d-8afa-fdcf1d61d967",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--892d9284-a754-4565-9156-b2fe1cd55ab4",
+            "created": "2021-09-09T23:20:25.970687Z",
+            "modified": "2021-09-09T23:20:25.970687Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--748bafde-140f-48d9-bd69-de578a129ec4",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9b309414-c76e-48ec-bfeb-ab862052fc1b",
+            "created": "2021-09-09T23:20:25.970985Z",
+            "modified": "2021-09-09T23:20:25.970985Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--b9ac24ab-542c-4647-bfc5-4687edb2449a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--20e8abe4-0a1f-4d5e-9195-03d81472daa3",
+            "created": "2021-09-09T23:20:25.971271Z",
+            "modified": "2021-09-09T23:20:25.971271Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--2c262cb9-08ec-48a8-b594-5088da5bbe39",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e850a9a3-8cc3-42c2-98c0-40f177fbb0c0",
+            "created": "2021-09-09T23:20:25.971558Z",
+            "modified": "2021-09-09T23:20:25.971558Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--a18b4ceb-00ea-4ce0-b5f0-ab8d85b5e67d",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c82de21d-a5ea-4102-bbb7-74b3e01f1a0a",
+            "created": "2021-09-09T23:20:25.971844Z",
+            "modified": "2021-09-09T23:20:25.971844Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--bf32adf8-7494-4c8f-8284-5f89911c497a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0d183ba1-69df-484f-bf6f-43e544f1201f",
+            "created": "2021-09-09T23:20:25.972129Z",
+            "modified": "2021-09-09T23:20:25.972129Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--dec83deb-12cc-4057-90b1-08dcfc342f2d",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3ca91dc7-b694-4bd1-ac53-4a3638e4ae63",
+            "created": "2021-09-09T23:20:25.972414Z",
+            "modified": "2021-09-09T23:20:25.972414Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--41997718-94f9-4baf-bc61-0ecb8c225d42",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a3898607-535d-4530-a8b0-15e9f92f3e91",
+            "created": "2021-09-09T23:20:25.972842Z",
+            "modified": "2021-09-09T23:20:25.972842Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--015be6c8-ec0d-49e6-805e-691165d0ec85",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2cd75dfc-4ab7-4cd0-b904-f83ab261db19",
+            "created": "2021-09-09T23:20:25.97313Z",
+            "modified": "2021-09-09T23:20:25.97313Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--a9f4b6d5-e17d-4cef-ad4a-1c5fd084fa16",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8e0f8df5-393b-4e1a-88e7-a63ec1012e71",
+            "created": "2021-09-09T23:20:25.973416Z",
+            "modified": "2021-09-09T23:20:25.973416Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--fc899f17-3c4f-405f-86b8-ffbc9e4da01a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--46073b52-bbcd-4b29-82da-f5d0942120bc",
+            "created": "2021-09-09T23:20:25.9737Z",
+            "modified": "2021-09-09T23:20:25.9737Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--390fadde-4df4-4c47-b080-0bcc0be89899",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b7dc5a3b-e888-4b38-89e4-fcf0f42cc6bf",
+            "created": "2021-09-09T23:20:25.973982Z",
+            "modified": "2021-09-09T23:20:25.973982Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--f82aedf4-db07-48a6-9eae-669c68001992",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--936a9e19-eb9c-4e0d-8317-916b54b1f8bb",
+            "created": "2021-09-09T23:20:25.974267Z",
+            "modified": "2021-09-09T23:20:25.974267Z",
+            "relationship_type": "derived-from",
+            "source_ref": "malware-analysis--1ade1223-ff60-4e4f-bd10-4ed1074d71e0",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9d06e5b9-9ab8-48d8-95a7-f1f899f1101b",
+            "created": "2021-09-09T23:20:25.974594Z",
+            "modified": "2021-09-09T23:20:25.974594Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--365d99a1-fa60-5efd-a2a9-7f4ec0d0c7fe",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3d2ab756-2043-4a8e-b702-878303301c90",
+            "created": "2021-09-09T23:20:25.974919Z",
+            "modified": "2021-09-09T23:20:25.974919Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--b9347d8f-f695-5d13-b7a8-b201932541de",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5c6ea117-bd36-4b3a-ac53-64a2caefe292",
+            "created": "2021-09-09T23:20:25.975236Z",
+            "modified": "2021-09-09T23:20:25.975236Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--fcd0f48a-294d-5c08-b461-513807097d79",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--258a5bd6-b862-442e-9462-7f0d8d4f26bb",
+            "created": "2021-09-09T23:20:25.975531Z",
+            "modified": "2021-09-09T23:20:25.975531Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--bb14de01-25f5-5627-976f-38fab457263d",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--da9a8e39-5d70-405b-af7b-2ac9741093d9",
+            "created": "2021-09-09T23:20:25.975814Z",
+            "modified": "2021-09-09T23:20:25.975814Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--899ed887-c351-55aa-a748-c7fc1c3d8cbc",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--261b949f-d111-42a1-bd57-3ad920571cf8",
+            "created": "2021-09-09T23:20:25.976095Z",
+            "modified": "2021-09-09T23:20:25.976095Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--183415d9-4bbd-5e1c-91ee-dd6a06a17098",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4e25cae1-b238-4220-918c-2dd45b3e8898",
+            "created": "2021-09-09T23:20:25.976375Z",
+            "modified": "2021-09-09T23:20:25.976375Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--3bbabd0a-6574-5be9-a2e5-b60778d495cf",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9ecbc844-cbab-410f-9282-e8d0cf851d8d",
+            "created": "2021-09-09T23:20:25.976663Z",
+            "modified": "2021-09-09T23:20:25.976663Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--3096cd08-5153-5837-b7b5-7b1b92d01130",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--cd30349c-6b0c-4d1c-a9af-9f716f68bc59",
+            "created": "2021-09-09T23:20:25.976951Z",
+            "modified": "2021-09-09T23:20:25.976951Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--eb70c8f0-5123-5b94-95a5-bc5a2a9ffa9f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ddadc425-70f4-4b52-ab85-64cdb69301bc",
+            "created": "2021-09-09T23:20:25.977239Z",
+            "modified": "2021-09-09T23:20:25.977239Z",
+            "relationship_type": "derived-from",
+            "source_ref": "ipv4-addr--683ac71f-4a06-56f9-9609-3a3d0b5e4501",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bcb8126d-aa43-454d-a491-4313c03d0cdd",
+            "created": "2021-09-09T23:20:25.97753Z",
+            "modified": "2021-09-09T23:20:25.97753Z",
+            "relationship_type": "derived-from",
+            "source_ref": "indicator--49bb4d0f-83fa-4df5-96fe-0a38ab20b685",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1310ba17-ec5a-40e0-85ce-e911f027b528",
+            "created": "2021-09-09T23:20:25.977817Z",
+            "modified": "2021-09-09T23:20:25.977817Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--51476834-cf39-5554-ba51-5e4234baaced",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--54967b9c-78c4-4ef2-9498-ebaa0028fc5c",
+            "created": "2021-09-09T23:20:25.978103Z",
+            "modified": "2021-09-09T23:20:25.978103Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--4dbb83c1-6d50-5650-b2d7-7828f998bac0",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3beb43f6-f7b0-49fe-85c1-9242129d8d05",
+            "created": "2021-09-09T23:20:25.978388Z",
+            "modified": "2021-09-09T23:20:25.978388Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--49a418df-af09-5014-bf78-559258cb35be",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6fba205f-b0b4-4695-99ff-7379c7abedf8",
+            "created": "2021-09-09T23:20:25.978674Z",
+            "modified": "2021-09-09T23:20:25.978674Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--af05111b-4990-5c8c-b9c3-cd4e025b6a2e",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--07e5ca44-a060-4330-a191-6da3d0b6ecd3",
+            "created": "2021-09-09T23:20:25.978984Z",
+            "modified": "2021-09-09T23:20:25.978984Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--9278a58e-aac9-5baa-bb3a-3a2ee9c5072a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--049cdf6b-f334-4b93-b397-84492f3bb8a9",
+            "created": "2021-09-09T23:20:25.979281Z",
+            "modified": "2021-09-09T23:20:25.979281Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--633978bb-35e0-59f2-8a68-3bd500c096de",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8683c1b2-99c7-4008-99a1-8f2637a71386",
+            "created": "2021-09-09T23:20:25.979562Z",
+            "modified": "2021-09-09T23:20:25.979562Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--ac85463b-a295-521c-95c7-96329f4aafb8",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--995868ac-ab93-4852-a2a6-c7a9eace1587",
+            "created": "2021-09-09T23:20:25.979845Z",
+            "modified": "2021-09-09T23:20:25.979845Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--5e42a0a4-968c-52a3-a866-473a65aea2e6",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--33704059-d325-4b49-bdd3-20256240a47a",
+            "created": "2021-09-09T23:20:25.980127Z",
+            "modified": "2021-09-09T23:20:25.980127Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--fc08d3cb-637e-5313-a367-e1b25ba5418b",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--67a1187d-6e7e-4362-a725-ce528054bf1b",
+            "created": "2021-09-09T23:20:25.980407Z",
+            "modified": "2021-09-09T23:20:25.980407Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--738c745a-a8b1-5905-b9d2-c0079348707a",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7d470eea-e892-4435-8b01-db454d96d4cd",
+            "created": "2021-09-09T23:20:25.980691Z",
+            "modified": "2021-09-09T23:20:25.980691Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--6b13949f-6906-5e6d-ab19-608fe2f3b473",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--71bbfeda-ba6a-4f67-b992-12e466cd1c75",
+            "created": "2021-09-09T23:20:25.980973Z",
+            "modified": "2021-09-09T23:20:25.980973Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--2c4fb17c-6aac-551c-9dcd-c4a8b9555080",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9798b2e6-0973-4700-bd49-2283023a5fdc",
+            "created": "2021-09-09T23:20:25.981253Z",
+            "modified": "2021-09-09T23:20:25.981253Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--3d69f92e-5068-5704-bf5c-68569f8d8840",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--98be0ea9-168f-4c74-8b45-af8dd810ca36",
+            "created": "2021-09-09T23:20:25.981535Z",
+            "modified": "2021-09-09T23:20:25.981535Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--b9adecb2-de64-5577-87d8-0349ab65d90c",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8e6ff9d0-5ef6-4b66-8559-bee0018b20f0",
+            "created": "2021-09-09T23:20:25.981815Z",
+            "modified": "2021-09-09T23:20:25.981815Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--936aba91-9940-5ffe-87e9-b8e829c4e25f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--795ac780-4165-4d6a-845c-89694b431bae",
+            "created": "2021-09-09T23:20:25.982096Z",
+            "modified": "2021-09-09T23:20:25.982096Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--91fba050-9ecf-5c75-9bf4-d3e62195db01",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4f476b87-cdd4-4ac9-a032-8a85f976c055",
+            "created": "2021-09-09T23:20:25.982376Z",
+            "modified": "2021-09-09T23:20:25.982376Z",
+            "relationship_type": "derived-from",
+            "source_ref": "domain-name--996aac32-c0f8-5715-8a15-47950422305f",
+            "target_ref": "report--dc81b539-1914-4b4c-8485-768acfe6d407"
+        }
+    ]
+}
