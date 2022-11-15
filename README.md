@@ -1,4 +1,4 @@
-# Any Threat Intelligence to STIX
+# Any Threat Intelligence to STIX (ATIS)
 
 The purpose of this project is to generate stix graphs from the information contained within a VirusTotal report.
 
