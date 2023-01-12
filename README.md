@@ -30,8 +30,8 @@ This project is developed using the python programming language and is targeted 
 ### Anaconda Installation
 
 ```
-conda create -n vtotalstix python=3.8
-conda activate vtotalstix
+conda create -n atis python=3.8
+conda activate atis
 pip install -r requirements.txt
 ```
 
