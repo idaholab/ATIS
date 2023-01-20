@@ -23,7 +23,7 @@ def enrichFile(filename, output_dir, include_cve=False):
     file.close()
 
     # Parse bundle
-    bundle = stix2.parse(jsonBundle)
+    bundle = stix2.parse(jsonBundle, allow_custom=True)
 
     numObjects = len(bundle.objects)
 
