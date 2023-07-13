@@ -58,7 +58,7 @@ def writeToFile(list, fileName, output_directory):
     )
     print("Bundle successfully created, writing to file")
     with open(os.path.join(output_directory, f"stix_{fileName}.json"), 'w') as outfl:
-               outfl.write(list.serialize(pretty=True))
+               outfl.write(list.serialize())
 
 def json_to_stixList(file_path):
     #Create stix memory store object
