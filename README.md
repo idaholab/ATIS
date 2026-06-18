@@ -1,3 +1,10 @@
+> [!WARNING]
+> **This repository has been archived and is no longer maintained.**
+> The code is provided for historical reference and may contain unpatched
+> or unknown vulnerabilities. It should not be used in production systems.
+
+---
+
 # Any Threat Intelligence to STIX (ATIS)
 
 The purpose of this project is to generate stix graphs from the information contained within a VirusTotal report.
